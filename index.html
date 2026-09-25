@@ -10,7 +10,7 @@
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     /* ==========================================================================
-       AUTHENTIC NOTION LIGHT MODE DESIGN SYSTEM
+       NOTION LIGHT DESIGN SYSTEM
        ========================================================================== */
     :root {
       --bg-body: #ffffff;
@@ -87,6 +87,26 @@
       padding: 0 32px;
     }
 
+    /* SVG Icons styling */
+    .svg-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      vertical-align: middle;
+      flex-shrink: 0;
+    }
+
+    .svg-icon svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      display: block;
+    }
+
     /* ==========================================================================
        TOP NOTION BREADCRUMB & NAV BAR (RESPONSIVE)
        ========================================================================== */
@@ -148,9 +168,9 @@
     }
 
     .page-title {
-      font-size: 32px;
+      font-size: 30px;
       font-weight: 700;
-      letter-spacing: -0.6px;
+      letter-spacing: -0.5px;
       color: var(--text-primary);
       margin-bottom: 8px;
       display: flex;
@@ -160,7 +180,7 @@
     }
 
     .page-subtitle {
-      font-size: 15px;
+      font-size: 14.5px;
       color: var(--text-secondary);
       max-width: 860px;
       line-height: 1.6;
@@ -240,9 +260,11 @@
     }
 
     .callout-icon {
+      color: var(--accent-blue);
       font-size: 20px;
       line-height: 1.2;
       flex-shrink: 0;
+      margin-top: 2px;
     }
 
     .callout-content h4 {
@@ -451,55 +473,38 @@
       gap: 12px;
     }
 
-    .view-switcher {
-      display: flex;
-      align-items: center;
-      gap: 4px;
-    }
-
-    .view-btn {
-      background: none;
-      border: none;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-weight: 500;
-      padding: 5px 10px;
-      border-radius: 5px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 5px;
-      transition: all 0.15s;
-    }
-
-    .view-btn:hover {
-      background: var(--bg-hover);
-      color: var(--text-primary);
-    }
-
-    .view-btn.active {
-      background: var(--bg-card);
-      color: var(--text-primary);
-      font-weight: 600;
-      box-shadow: var(--shadow-sm);
-    }
-
     .db-controls {
       display: flex;
       align-items: center;
       gap: 8px;
       flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .search-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex: 1;
+      min-width: 220px;
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 10px;
+      color: var(--text-muted);
+      pointer-events: none;
     }
 
     .search-input {
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 6px;
-      padding: 6px 12px;
+      padding: 7px 12px 7px 32px;
       color: var(--text-primary);
       font-family: inherit;
       font-size: 13px;
-      width: 230px;
+      width: 100%;
       transition: all 0.15s;
     }
 
@@ -513,7 +518,7 @@
       background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 6px;
-      padding: 6px 10px;
+      padding: 7px 10px;
       color: var(--text-primary);
       font-family: inherit;
       font-size: 12.5px;
@@ -589,7 +594,7 @@
       color: var(--text-secondary);
       font-weight: 500;
       font-size: 12px;
-      padding: 9px 14px;
+      padding: 10px 14px;
       border-bottom: 1px solid var(--border-subtle);
       border-right: 1px solid var(--border-subtle);
       position: sticky;
@@ -602,7 +607,7 @@
     }
 
     .notion-table td {
-      padding: 10px 14px;
+      padding: 11px 14px;
       border-bottom: 1px solid var(--border-subtle);
       border-right: 1px solid var(--border-subtle);
       vertical-align: middle;
@@ -620,7 +625,7 @@
     .pill {
       display: inline-flex;
       align-items: center;
-      gap: 4px;
+      gap: 5px;
       padding: 2px 7px;
       border-radius: 4px;
       font-size: 11.5px;
@@ -667,39 +672,6 @@
     .pill-brown {
       background: var(--tag-brown-bg);
       color: var(--tag-brown-text);
-    }
-
-    /* Gallery Grid View */
-    .gallery-grid {
-      display: none;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 14px;
-      padding: 16px;
-      background: var(--bg-surface);
-      border: 1px solid var(--border-subtle);
-      border-radius: 0 0 8px 8px;
-    }
-
-    .gallery-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 8px;
-      padding: 16px;
-      cursor: pointer;
-      transition: all 0.15s;
-    }
-
-    .gallery-card:hover {
-      border-color: var(--border-medium);
-      transform: translateY(-2px);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .gallery-card-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 8px;
     }
 
     /* Modal / Side-Peek Drawer */
@@ -768,20 +740,6 @@
       color: var(--text-primary);
     }
 
-    /* Notion Footer */
-    footer {
-      border-top: 1px solid var(--border-subtle);
-      padding: 24px 0;
-      margin-top: 48px;
-      font-size: 12.5px;
-      color: var(--text-muted);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
     /* ==========================================================================
        RESPONSIVE MEDIA QUERIES (MOBILE OPTIMIZATIONS)
        ========================================================================== */
@@ -821,15 +779,13 @@
         gap: 10px;
       }
 
-      .view-switcher {
-        width: 100%;
-        justify-content: flex-start;
-      }
-
       .db-controls {
-        width: 100%;
         flex-direction: column;
         align-items: stretch;
+      }
+
+      .search-wrapper {
+        width: 100%;
       }
 
       .search-input {
@@ -865,27 +821,37 @@
       .modal-label {
         width: 100%;
       }
-
-      footer {
-        flex-direction: column;
-        align-items: flex-start;
-      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Top Notion Navigation Bar (Mobile-Responsive) -->
+  <!-- Top Notion Navigation Bar -->
   <nav class="top-nav">
     <div class="breadcrumb">
       <span class="nav-prefix">Workspace <span class="slash">/</span> Composio AI Product Ops <span class="slash">/</span></span>
-      <span class="current">⚡ 100 Apps Study</span>
+      <span class="current">
+        <span class="svg-icon" style="color: var(--accent-blue);">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        </span>
+        100 Apps Study
+      </span>
     </div>
 
     <div class="nav-actions">
-      <button class="btn" onclick="exportCSV()">⬇ CSV</button>
-      <button class="btn" onclick="exportJSON()">⬇ JSON</button>
+      <button class="btn" onclick="exportCSV()">
+        <span class="svg-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </span>
+        CSV
+      </button>
+      <button class="btn" onclick="exportJSON()">
+        <span class="svg-icon">
+          <svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+        </span>
+        JSON
+      </button>
     </div>
   </nav>
 
@@ -902,23 +868,38 @@
       </p>
 
       <div class="page-meta-row">
-        <div class="meta-pill">📋 Status: <strong>Complete</strong></div>
-        <div class="meta-pill">🎯 Scope: <strong>100 Apps / 10 Categories</strong></div>
-        <div class="meta-pill">⚡ Engine: <strong>OpenRouter Multi-Pass Agent</strong></div>
-        <div class="meta-pill">🔍 Verification: <strong>+30% Accuracy Progression</strong></div>
+        <div class="meta-pill">
+          <span class="svg-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+          Status: <strong>Complete</strong>
+        </div>
+        <div class="meta-pill">
+          <span class="svg-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+          Scope: <strong>100 Apps / 10 Categories</strong>
+        </div>
+        <div class="meta-pill">
+          <span class="svg-icon"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+          Engine: <strong>OpenRouter Multi-Pass Agent</strong>
+        </div>
+        <div class="meta-pill">
+          <span class="svg-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></span>
+          Verification: <strong>+30% Accuracy Progression</strong>
+        </div>
       </div>
     </header>
 
     <!-- Notion Callout Box -->
     <div class="callout">
-      <div class="callout-icon">💡</div>
+      <div class="callout-icon">
+        <span class="svg-icon">
+          <svg viewBox="0 0 24 24" style="width:20px; height:20px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        </span>
+      </div>
       <div class="callout-content">
         <h4>Executive Summary & Reviewer Guide</h4>
         <p>
           This single-page interactive case study synthesizes the developer ecosystem across 100 customer-requested SaaS
           platforms.
-          Use the <strong>Table</strong> or <strong>Gallery</strong> views below to filter by category, authentication
-          scheme, and gating model, or click any row to inspect deep technical evidence.
+          Use the <strong>Table Grid</strong> below to search and filter by category, authentication scheme, gating model, or buildability verdict, and click any row to inspect deep technical evidence.
         </p>
       </div>
     </div>
@@ -926,31 +907,46 @@
     <!-- KPI Stats Grid -->
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-header"><span>📊</span> Total Evaluated</div>
+        <div class="stat-header">
+          <span class="svg-icon"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></span>
+          Total Evaluated
+        </div>
         <div class="stat-val">100 / 100</div>
         <div class="stat-sub">10 enterprise SaaS domains</div>
       </div>
 
       <div class="stat-card">
-        <div class="stat-header"><span>⚡</span> Ready Today</div>
+        <div class="stat-header">
+          <span class="svg-icon" style="color: var(--tag-green-text);"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></span>
+          Ready Today
+        </div>
         <div class="stat-val" style="color: var(--tag-green-text);">89%</div>
         <div class="stat-sub">89 Ready • 11 Gated/Blocked</div>
       </div>
 
       <div class="stat-card">
-        <div class="stat-header"><span>🔑</span> Auth Dominance</div>
+        <div class="stat-header">
+          <span class="svg-icon" style="color: var(--tag-blue-text);"><svg viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span>
+          Auth Dominance
+        </div>
         <div class="stat-val" style="color: var(--tag-blue-text);">65% OAuth2</div>
         <div class="stat-sub">40% API Key • 46% PAT/Bearer</div>
       </div>
 
       <div class="stat-card">
-        <div class="stat-header"><span>🚀</span> Self-Serve</div>
+        <div class="stat-header">
+          <span class="svg-icon" style="color: var(--tag-purple-text);"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></span>
+          Self-Serve
+        </div>
         <div class="stat-val" style="color: var(--tag-purple-text);">77%</div>
         <div class="stat-sub">Instant sandbox / dev tokens</div>
       </div>
 
       <div class="stat-card" style="grid-column: span 2 / auto;">
-        <div class="stat-header"><span>🎯</span> Verification Gain</div>
+        <div class="stat-header">
+          <span class="svg-icon" style="color: var(--tag-green-text);"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg></span>
+          Verification Gain
+        </div>
         <div class="stat-val" style="color: var(--tag-green-text);">+30.0% <span class="pill pill-green" style="font-size:11px;">95% Acc</span></div>
         <div class="stat-sub">Pass 1: 65% → Pass 2: 95%</div>
       </div>
@@ -964,7 +960,12 @@
 
       <div class="insights-3col">
         <div class="insight-card">
-          <h3><span class="pill pill-blue">🔑 Auth Dynamics</span></h3>
+          <h3>
+            <span class="pill pill-blue">
+              <span class="svg-icon"><svg viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"></path></svg></span>
+              Auth Dynamics
+            </span>
+          </h3>
           <p><strong>OAuth2 dominates user-delegated SaaS (65%)</strong>, essential for CRM, Helpdesk, and Project Management.</p>
           <ul>
             <li><strong>API Key & Bearer Tokens (40-46%)</strong>: Dominant in Developer Infra and Data Scraping for machine-to-machine speed.</li>
@@ -973,7 +974,12 @@
         </div>
 
         <div class="insight-card">
-          <h3><span class="pill pill-orange">⚡ Gating Friction</span></h3>
+          <h3>
+            <span class="pill pill-orange">
+              <span class="svg-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg></span>
+              Gating Friction
+            </span>
+          </h3>
           <p><strong>77% of apps provide friction-free self-serve sandboxes</strong> or free tiers for instant credential generation.</p>
           <ul>
             <li><strong>The 23% Gated Barrier</strong>: Concentrated in Enterprise CRM (DealCloud), Finance (PitchBook), and Ads (Google/LinkedIn Partner Review).</li>
@@ -982,7 +988,12 @@
         </div>
 
         <div class="insight-card">
-          <h3><span class="pill pill-purple">🧩 MCP & Quick Wins</span></h3>
+          <h3>
+            <span class="pill pill-purple">
+              <span class="svg-icon"><svg viewBox="0 0 24 24"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg></span>
+              MCP & Quick Wins
+            </span>
+          </h3>
           <p><strong>75% of apps have active MCP servers or native toolkits</strong> (21 Official MCPs, 49 Community, 5 Composio native).</p>
           <ul>
             <li><strong>83 Immediate Quick Wins</strong>: Scoring 8-10 with open REST/GraphQL specs and instant token generation.</li>
@@ -1057,49 +1068,49 @@
               <td><strong>#1 Salesforce</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span></td>
               <td>Overestimated blocker; claimed paid enterprise required.</td>
               <td>Corrected: Flagged free Salesforce Developer Edition instant Connected App.</td>
-              <td><span class="pill pill-green">✓ Ready Today</span></td>
+              <td><span class="pill pill-green">Ready Today</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
               <td><strong>#10 DealCloud</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span></td>
               <td>Hallucinated self-serve signup from marketing portal.</td>
               <td>Corrected: Detected private Intapp enterprise tenant requirement.</td>
-              <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
+              <td><span class="pill pill-red">Blocked: Enterprise</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
               <td><strong>#31 Google Ads</strong><br><span style="color:var(--text-muted); font-size:11px;">Marketing</span></td>
               <td>Marked self-serve based on Google Cloud Console.</td>
               <td>Corrected: Flagged mandatory Google Ads API Center Developer Token approval.</td>
-              <td><span class="pill pill-red">✕ Blocked: Partner Gate</span></td>
+              <td><span class="pill pill-red">Blocked: Partner Gate</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
               <td><strong>#44 SF Commerce Cloud</strong><br><span style="color:var(--text-muted); font-size:11px;">Ecommerce</span></td>
               <td>Conflated with core Salesforce developer org.</td>
               <td>Corrected: Differentiated B2C Demandware Account Manager gate.</td>
-              <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
+              <td><span class="pill pill-red">Blocked: Enterprise</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
               <td><strong>#58 Sherlock</strong><br><span style="color:var(--text-muted); font-size:11px;">Data/OSINT</span></td>
               <td>Looked for REST endpoint and marked blocked.</td>
               <td>Corrected: Identified open-source Python CLI callable via subprocess/container.</td>
-              <td><span class="pill pill-green">✓ Ready Today</span></td>
+              <td><span class="pill pill-green">Ready Today</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
               <td><strong>#90 PitchBook</strong><br><span style="color:var(--text-muted); font-size:11px;">Finance</span></td>
               <td>Marked trial available from marketing form.</td>
               <td>Corrected: Verified strict $25k+/yr institutional enterprise contract gate.</td>
-              <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
+              <td><span class="pill pill-red">Blocked: Enterprise</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
               <td><strong>#91 NotebookLM</strong><br><span style="color:var(--text-muted); font-size:11px;">AI</span></td>
               <td>Conflated consumer UI with Gemini API.</td>
               <td>Corrected: Noted consumer app is UI-only without standalone public REST API.</td>
-              <td><span class="pill pill-red">✕ Blocked: No Public API</span></td>
+              <td><span class="pill pill-red">Blocked: No Public API</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
           </tbody>
@@ -1116,13 +1127,11 @@
 
       <!-- Database Top Bar -->
       <div class="db-header">
-        <div class="view-switcher">
-          <button class="view-btn active" id="tableViewBtn" onclick="switchView('table')">📋 Table View</button>
-          <button class="view-btn" id="galleryViewBtn" onclick="switchView('gallery')">🗂 Gallery View</button>
-        </div>
-
         <div class="db-controls">
-          <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search apps, keywords, auth...">
+          <div class="search-wrapper">
+            <span class="svg-icon search-icon"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+            <input type="text" id="searchInput" class="search-input" placeholder="Search apps, keywords, auth...">
+          </div>
 
           <select id="verdictFilter" class="filter-select">
             <option value="all">All Verdicts</option>
@@ -1186,18 +1195,7 @@
           </tbody>
         </table>
       </div>
-
-      <!-- Gallery View -->
-      <div class="gallery-grid" id="galleryViewContainer">
-        <!-- Populated by JavaScript -->
-      </div>
     </section>
-
-    <!-- Notion Footer -->
-    <footer>
-      <div>Composio AI Product Operations Case Study • Multi-Pass Research Pipeline</div>
-      <div>Built with OpenRouter LLM + Notion Design System</div>
-    </footer>
 
   </main>
 
@@ -1207,7 +1205,9 @@
       <button class="modal-close" onclick="closeModal()">&times;</button>
       
       <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
-        <span id="modalIcon" style="font-size: 28px;">📦</span>
+        <span class="svg-icon" style="color: var(--accent-blue);">
+          <svg viewBox="0 0 24 24" style="width:24px; height:24px;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+        </span>
         <div>
           <h2 id="modalAppName" style="font-size: 20px; font-weight: 700; color: var(--text-primary);">App Name</h2>
           <p id="modalAppCategory" style="font-size: 12px; color: var(--text-secondary);">Category</p>
@@ -1250,7 +1250,10 @@
       </div>
 
       <div style="display: flex; gap: 10px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
-        <a id="modalDocsBtn" href="#" target="_blank" class="btn btn-primary">📖 Open Official Developer Docs ↗</a>
+        <a id="modalDocsBtn" href="#" target="_blank" class="btn btn-primary">
+          <span class="svg-icon"><svg viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+          Open Official Developer Docs
+        </a>
         <button class="btn" onclick="closeModal()">Close</button>
       </div>
     </div>
@@ -1259,25 +1262,14 @@
   <script>
     let appsData = [];
     let currentCategory = 'all';
-    let currentView = 'table';
     let charts = {};
 
-    // 1. View Switcher (Table vs Gallery)
-    function switchView(view) {
-      currentView = view;
-      document.getElementById('tableViewBtn').classList.toggle('active', view === 'table');
-      document.getElementById('galleryViewBtn').classList.toggle('active', view === 'gallery');
-      document.getElementById('tableViewContainer').style.display = view === 'table' ? 'block' : 'none';
-      document.getElementById('galleryViewContainer').style.display = view === 'gallery' ? 'grid' : 'none';
-      renderView();
-    }
-
-    // 2. Data Loading
+    // 1. Data Loading
     async function loadData() {
       try {
         const response = await fetch('./data/pass2_verified.json');
         appsData = await response.json();
-        renderView();
+        renderTable();
         initCharts();
       } catch (err) {
         console.error('Failed loading data JSON:', err);
@@ -1305,18 +1297,10 @@
       });
     }
 
-    function renderView() {
+    function renderTable() {
       const filtered = getFilteredData();
       document.getElementById('tableCountDisplay').innerText = `Showing ${filtered.length} of ${appsData.length} apps`;
 
-      if (currentView === 'table') {
-        renderTable(filtered);
-      } else {
-        renderGallery(filtered);
-      }
-    }
-
-    function renderTable(filtered) {
       const tbody = document.getElementById('tableBody');
       tbody.innerHTML = '';
 
@@ -1328,33 +1312,33 @@
         // Verdict Badge
         let verdictBadge = '';
         if (app.buildability_verdict === 'Ready Today') {
-          verdictBadge = `<span class="pill pill-green">✓ Ready Today</span>`;
+          verdictBadge = `<span class="pill pill-green">Ready Today</span>`;
         } else if (app.buildability_verdict.includes('Blocked')) {
-          verdictBadge = `<span class="pill pill-red">✕ ${app.buildability_verdict.replace('Blocked: ', '')}</span>`;
+          verdictBadge = `<span class="pill pill-red">${app.buildability_verdict.replace('Blocked: ', '')}</span>`;
         } else {
-          verdictBadge = `<span class="pill pill-yellow">⚠ Wrapper Req</span>`;
+          verdictBadge = `<span class="pill pill-yellow">Wrapper Req</span>`;
         }
 
         // Gating Badge
         let gatingBadge = '';
         if (app.gating_type.includes('Self-Serve')) {
-          gatingBadge = `<span class="pill pill-green">⚡ Self-Serve</span>`;
+          gatingBadge = `<span class="pill pill-green">Self-Serve</span>`;
         } else if (app.gating_type.includes('Paid')) {
-          gatingBadge = `<span class="pill pill-yellow">💳 Paid Plan</span>`;
+          gatingBadge = `<span class="pill pill-yellow">Paid Plan</span>`;
         } else if (app.gating_type.includes('Enterprise')) {
-          gatingBadge = `<span class="pill pill-red">🏢 Enterprise</span>`;
+          gatingBadge = `<span class="pill pill-red">Enterprise</span>`;
         } else {
-          gatingBadge = `<span class="pill pill-purple">🤝 Partner Gate</span>`;
+          gatingBadge = `<span class="pill pill-purple">Partner Gate</span>`;
         }
 
         // MCP Badge
         let mcpBadge = '';
         if (app.mcp_status === 'Official MCP') {
-          mcpBadge = `<span class="pill pill-purple">★ Official MCP</span>`;
+          mcpBadge = `<span class="pill pill-purple">Official MCP</span>`;
         } else if (app.mcp_status === 'Community MCP') {
-          mcpBadge = `<span class="pill pill-blue">👥 Community</span>`;
+          mcpBadge = `<span class="pill pill-blue">Community</span>`;
         } else if (app.mcp_status === 'Composio Native') {
-          mcpBadge = `<span class="pill pill-blue">⚡ Composio</span>`;
+          mcpBadge = `<span class="pill pill-blue">Composio</span>`;
         } else {
           mcpBadge = `<span class="pill pill-gray">None</span>`;
         }
@@ -1378,41 +1362,14 @@
           <td>${mcpBadge}</td>
           <td>${verdictBadge}</td>
           <td><span class="pill ${scoreClass}">${score}/10</span></td>
-          <td><a href="${app.evidence_url}" target="_blank" onclick="event.stopPropagation()" style="font-size: 12px;">Docs ↗</a></td>
+          <td>
+            <a href="${app.evidence_url}" target="_blank" onclick="event.stopPropagation()" style="font-size: 12px; display:inline-flex; align-items:center; gap:3px;">
+              Docs
+              <span class="svg-icon" style="font-size:11px;"><svg viewBox="0 0 24 24" style="width:11px; height:11px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg></span>
+            </a>
+          </td>
         `;
         tbody.appendChild(tr);
-      });
-    }
-
-    function renderGallery(filtered) {
-      const container = document.getElementById('galleryViewContainer');
-      container.innerHTML = '';
-
-      filtered.forEach(app => {
-        const card = document.createElement('div');
-        card.className = 'gallery-card';
-        card.onclick = () => openModal(app);
-
-        let verdictBadge = app.buildability_verdict === 'Ready Today'
-          ? `<span class="pill pill-green">✓ Ready</span>`
-          : `<span class="pill pill-red">✕ Gated</span>`;
-
-        card.innerHTML = `
-          <div class="gallery-card-head">
-            <div>
-              <div style="font-size: 15px; font-weight: 700; color: var(--text-primary);">#${app.id} ${app.name}</div>
-              <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 2px;">${app.category}</div>
-            </div>
-            ${verdictBadge}
-          </div>
-          <p style="font-size: 12.5px; color: var(--text-secondary); margin: 10px 0; line-height: 1.45;">${app.one_liner}</p>
-          <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px;">
-            <span class="pill pill-gray">${app.auth_methods[0] || 'Auth'}</span>
-            <span class="pill pill-blue">${app.mcp_status}</span>
-            <span class="pill pill-purple">${app.gating_type.split(' ')[0]}</span>
-          </div>
-        `;
-        container.appendChild(card);
       });
     }
 
@@ -1447,14 +1404,14 @@
         document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentCategory = btn.getAttribute('data-cat');
-        renderView();
+        renderTable();
       });
     });
 
-    document.getElementById('searchInput').addEventListener('input', renderView);
-    document.getElementById('verdictFilter').addEventListener('change', renderView);
-    document.getElementById('gatingFilter').addEventListener('change', renderView);
-    document.getElementById('mcpFilter').addEventListener('change', renderView);
+    document.getElementById('searchInput').addEventListener('input', renderTable);
+    document.getElementById('verdictFilter').addEventListener('change', renderTable);
+    document.getElementById('gatingFilter').addEventListener('change', renderTable);
+    document.getElementById('mcpFilter').addEventListener('change', renderTable);
 
     // Export Helpers
     function exportCSV() {
