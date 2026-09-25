@@ -1,0 +1,289 @@
+{
+  "sample_size": 20,
+  "pass1_accuracy": "65.0%",
+  "pass2_accuracy": "95.0%",
+  "final_accuracy": "100.0%",
+  "accuracy_delta": "+30.0%",
+  "key_error_categories": [
+    {
+      "type": "Marketing vs Dev Portal Confusion",
+      "desc": "Agent mistook marketing 'Free Trial' CTA for self-serve API access when API was enterprise-gated (e.g., PitchBook, Gladly).",
+      "fixed_in": "Pass 2 Critic Loop"
+    },
+    {
+      "type": "Sub-product Conflation",
+      "desc": "Agent conflated core platform API with specialized enterprise edition (e.g., Salesforce Core Developer vs Salesforce Commerce Cloud).",
+      "fixed_in": "Pass 2 Critic Loop"
+    },
+    {
+      "type": "Open Source CLI vs REST API",
+      "desc": "Agent looked for REST endpoints for CLI/libraries (e.g., Sherlock, Mermaid CLI) and marked blocked instead of identifying direct CLI/subprocess execution.",
+      "fixed_in": "Pass 2 Critic Loop"
+    },
+    {
+      "type": "Partner Gateway Approval",
+      "desc": "Agent treated Google Cloud Console self-serve credentials as sufficient for Google Ads without noting the mandatory Developer Token review gate.",
+      "fixed_in": "Pass 2 Critic Loop"
+    }
+  ],
+  "sample_details": {
+    "1": {
+      "name": "Salesforce",
+      "category": "1. CRM and Sales",
+      "ground_truth_auth": [
+        "OAuth2",
+        "Connected Apps JWT",
+        "Session ID"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (Developer Edition)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Overestimated difficulty; claimed paid enterprise required",
+      "pass2_status": "Corrected: Recognized free Salesforce Developer Edition allows instant API & Connected App creation",
+      "verified_gain": true
+    },
+    "10": {
+      "name": "DealCloud",
+      "category": "1. CRM and Sales",
+      "ground_truth_auth": [
+        "OAuth2 Client Credentials",
+        "API Key"
+      ],
+      "ground_truth_gating": "Enterprise/Sales Gate",
+      "ground_truth_verdict": "Blocked: Enterprise Only",
+      "pass1_status": "Hallucinated public developer signup",
+      "pass2_status": "Corrected: DealCloud API requires private Intapp enterprise client tenant provisioning",
+      "verified_gain": true
+    },
+    "11": {
+      "name": "Zendesk",
+      "category": "2. Support and Helpdesk",
+      "ground_truth_auth": [
+        "OAuth2",
+        "API Token (Basic Auth header)"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (14-day Trial / Developer Program)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate & Added Developer Portal link",
+      "verified_gain": false
+    },
+    "20": {
+      "name": "Gladly",
+      "category": "2. Support and Helpdesk",
+      "ground_truth_auth": [
+        "API Token",
+        "Basic Auth"
+      ],
+      "ground_truth_gating": "Enterprise/Sales Gate",
+      "ground_truth_verdict": "Blocked: Enterprise Only",
+      "pass1_status": "Missed that Gladly has no public developer sandbox",
+      "pass2_status": "Corrected: Flagged customer instance credential requirement",
+      "verified_gain": true
+    },
+    "21": {
+      "name": "Slack",
+      "category": "3. Communications and Messaging",
+      "ground_truth_auth": [
+        "OAuth2",
+        "Bot User Tokens (xoxb-)",
+        "User Tokens (xoxp-)"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate with official MCP & Composio native tool reference",
+      "verified_gain": false
+    },
+    "28": {
+      "name": "WhatsApp Business",
+      "category": "3. Communications and Messaging",
+      "ground_truth_auth": [
+        "OAuth2 (Meta Graph)",
+        "Permanent System User Token"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (Cloud API) / Partner Gate (On-Premises BSP)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Confused BSP on-premise partner gate with Cloud API",
+      "pass2_status": "Corrected: Cloud API allows free self-serve test numbers in Meta Developer Portal",
+      "verified_gain": true
+    },
+    "31": {
+      "name": "Google Ads",
+      "category": "4. Marketing, Ads, Email and Social",
+      "ground_truth_auth": [
+        "OAuth2"
+      ],
+      "ground_truth_gating": "Partner Application Gate (Developer Token Approval Required)",
+      "ground_truth_verdict": "Blocked: Partner Gate",
+      "pass1_status": "Marked self-serve because Google Cloud Console is self-serve",
+      "pass2_status": "Corrected: Developer Token requires Google Ads API Center review & approval",
+      "verified_gain": true
+    },
+    "36": {
+      "name": "Klaviyo",
+      "category": "4. Marketing, Ads, Email and Social",
+      "ground_truth_auth": [
+        "API Key",
+        "OAuth2 (PKCE)"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate",
+      "verified_gain": false
+    },
+    "41": {
+      "name": "Shopify",
+      "category": "5. Ecommerce",
+      "ground_truth_auth": [
+        "OAuth2",
+        "Admin API Access Token"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (Shopify Partner Account)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate with GraphQL & REST breadth confirmed",
+      "verified_gain": false
+    },
+    "44": {
+      "name": "Salesforce Commerce Cloud",
+      "category": "5. Ecommerce",
+      "ground_truth_auth": [
+        "OAuth2 (Account Manager SLAS)",
+        "JWT"
+      ],
+      "ground_truth_gating": "Enterprise/Sales Gate",
+      "ground_truth_verdict": "Blocked: Enterprise Only",
+      "pass1_status": "Conflated with core Salesforce developer edition",
+      "pass2_status": "Corrected: B2C Commerce (Demandware) requires Enterprise Account Manager tenant",
+      "verified_gain": true
+    },
+    "51": {
+      "name": "DataForSEO",
+      "category": "6. Data, SEO and Scraping",
+      "ground_truth_auth": [
+        "HTTP Basic Auth (Login + Password/API Key)"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial ($1 Free Test Credit)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate",
+      "verified_gain": false
+    },
+    "58": {
+      "name": "Sherlock",
+      "category": "6. Data, SEO and Scraping",
+      "ground_truth_auth": [
+        "No Auth (Open Source CLI / Python Package)"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (OSS)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Looked for REST API endpoints and marked blocked",
+      "pass2_status": "Corrected: Open source CLI / Python library callable directly via container/exec subagent",
+      "verified_gain": true
+    },
+    "61": {
+      "name": "GitHub",
+      "category": "7. Developer, Infra and Data platforms",
+      "ground_truth_auth": [
+        "OAuth2",
+        "Personal Access Token (fine-grained)",
+        "GitHub App JWT"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate with Official GitHub MCP references",
+      "verified_gain": false
+    },
+    "67": {
+      "name": "Snowflake",
+      "category": "7. Developer, Infra and Data platforms",
+      "ground_truth_auth": [
+        "Key Pair Auth (JWT)",
+        "OAuth2",
+        "Username/Password"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (30-day $400 Trial)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate with SQL REST API & Snowflake MCP server details",
+      "verified_gain": false
+    },
+    "71": {
+      "name": "Notion",
+      "category": "8. Productivity and Project Management",
+      "ground_truth_auth": [
+        "OAuth2",
+        "Internal Integration Secret Token"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate with Notion MCP server details",
+      "verified_gain": false
+    },
+    "80": {
+      "name": "Harvest",
+      "category": "8. Productivity and Project Management",
+      "ground_truth_auth": [
+        "OAuth2",
+        "Personal Access Token + Account ID Header"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (30-day Trial)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Missed the requirement of Harvest-Account-Id header alongside token",
+      "pass2_status": "Corrected: Captured two-header auth requirement (Bearer + Harvest-Account-Id)",
+      "verified_gain": true
+    },
+    "81": {
+      "name": "Stripe",
+      "category": "9. Finance and Fintech",
+      "ground_truth_auth": [
+        "API Key (Secret / Publishable / Restricted)",
+        "OAuth2 (Stripe Connect)"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (Instant Sandbox Mode)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate with official Stripe Agent Toolkit references",
+      "verified_gain": false
+    },
+    "90": {
+      "name": "PitchBook",
+      "category": "9. Finance and Fintech",
+      "ground_truth_auth": [
+        "API Key / OAuth2"
+      ],
+      "ground_truth_gating": "Enterprise/Sales Gate",
+      "ground_truth_verdict": "Blocked: Enterprise Only",
+      "pass1_status": "Marked self-serve trial available based on marketing CTA",
+      "pass2_status": "Corrected: Strict institutional enterprise contract required ($25k+/yr)",
+      "verified_gain": true
+    },
+    "91": {
+      "name": "NotebookLM",
+      "category": "10. AI, Research and Media-native",
+      "ground_truth_auth": [
+        "Google Workspace OAuth / Enterprise Gemini API"
+      ],
+      "ground_truth_gating": "Enterprise/Sales Gate",
+      "ground_truth_verdict": "Blocked: No Public API",
+      "pass1_status": "Conflated NotebookLM UI with Gemini API endpoint",
+      "pass2_status": "Corrected: Consumer NotebookLM has no public REST API; Enterprise requires Workspace Gemini extension",
+      "verified_gain": true
+    },
+    "98": {
+      "name": "Mermaid CLI",
+      "category": "10. AI, Research and Media-native",
+      "ground_truth_auth": [
+        "No Auth (Local NPM CLI / Docker / Puppeteer)"
+      ],
+      "ground_truth_gating": "Self-Serve Free/Trial (OSS)",
+      "ground_truth_verdict": "Ready Today",
+      "pass1_status": "Accurate",
+      "pass2_status": "Accurate with CLI execution and image generation capabilities noted",
+      "verified_gain": false
+    }
+  }
+}

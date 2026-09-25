@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Composio AI Product Ops — 100 Apps Toolkit & MCP Research Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    /* ==========================================================================
+       AUTHENTIC NOTION LIGHT MODE DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --bg-body: #ffffff;
+      --bg-surface: #f7f7f5;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f1ef;
+      --bg-hover: rgba(55, 53, 47, 0.06);
+      --bg-callout: #f7f6f3;
+      --border-subtle: #e9e9e7;
+      --border-medium: #dfdfde;
+      --border-focus: #2383e2;
+
+      --text-primary: #37352f;
+      --text-secondary: #787774;
+      --text-muted: #9b9a97;
+
+      --accent-blue: #0b6e99;
+      --accent-cyan: #008da5;
+      --accent-indigo: #4f46e5;
+
+      /* Notion Pastel Tag Colors */
+      --tag-gray-bg: #e3e2e0;
+      --tag-gray-text: #32302c;
+      --tag-brown-bg: #eee0da;
+      --tag-brown-text: #64473a;
+      --tag-orange-bg: #fadec9;
+      --tag-orange-text: #8a3800;
+      --tag-yellow-bg: #fdecc8;
+      --tag-yellow-text: #89632a;
+      --tag-green-bg: #dbeddb;
+      --tag-green-text: #1c3829;
+      --tag-blue-bg: #d3e5ef;
+      --tag-blue-text: #183347;
+      --tag-purple-bg: #e8deee;
+      --tag-purple-text: #412d52;
+      --tag-pink-bg: #f5e0e9;
+      --tag-pink-text: #4c2337;
+      --tag-red-bg: #ffe2dd;
+      --tag-red-text: #6e3630;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 14px rgba(0, 0, 0, 0.07);
+      --shadow-modal: 0 16px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-body);
+      color: var(--text-primary);
+      font-family: 'Inter', var(--font-sans, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 90px;
+    }
+
+    a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 1360px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* ==========================================================================
+       TOP NOTION BREADCRUMB & NAV BAR
+       ========================================================================== */
+    .top-nav {
+      height: 48px;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.95);
+      z-index: 60;
+      backdrop-filter: blur(8px);
+      padding: 0 32px;
+    }
+
+    .breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .breadcrumb span.slash {
+      color: var(--text-muted);
+      font-weight: 400;
+    }
+
+    .breadcrumb .current {
+      color: var(--text-primary);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Notion Header */
+    .notion-header {
+      padding: 36px 0 20px;
+      margin-bottom: 20px;
+    }
+
+    .page-icon {
+      font-size: 50px;
+      line-height: 1;
+      margin-bottom: 14px;
+      display: inline-block;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .page-icon:hover {
+      transform: scale(1.08);
+    }
+
+    .page-title {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .page-subtitle {
+      font-size: 15px;
+      color: var(--text-secondary);
+      max-width: 860px;
+      line-height: 1.6;
+    }
+
+    .page-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 14px;
+      flex-wrap: wrap;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      padding: 3px 10px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: var(--text-secondary);
+    }
+
+    /* Notion Action Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-card);
+      color: var(--text-primary);
+    }
+
+    .btn:hover {
+      background: var(--bg-hover);
+      border-color: var(--border-medium);
+      text-decoration: none;
+    }
+
+    .btn-primary {
+      background: var(--accent-blue);
+      color: #ffffff !important;
+      border: 1px solid var(--accent-blue);
+      font-weight: 600;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.92;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* ==========================================================================
+       NOTION CALLOUT BLOCKS
+       ========================================================================== */
+    .callout {
+      background: var(--bg-callout);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px 18px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .callout-icon {
+      font-size: 20px;
+      line-height: 1.2;
+      flex-shrink: 0;
+    }
+
+    .callout-content h4 {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .callout-content p {
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    /* ==========================================================================
+       KPI STATS PROPERTY ROW
+       ========================================================================== */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .stat-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 14px 16px;
+      transition: all 0.15s;
+    }
+
+    .stat-card:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--border-medium);
+    }
+
+    .stat-header {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .stat-val {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.4px;
+      color: var(--text-primary);
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+    }
+
+    .stat-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ==========================================================================
+       NOTION SECTION BOXES & PATTERNS
+       ========================================================================== */
+    .section-block {
+      margin-bottom: 36px;
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .insights-3col {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .insight-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 18px;
+    }
+
+    .insight-card h3 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--text-primary);
+    }
+
+    .insight-card p {
+      font-size: 13px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+    }
+
+    .insight-card ul {
+      margin-top: 10px;
+      padding-left: 18px;
+      font-size: 12.5px;
+      color: var(--text-secondary);
+    }
+
+    .insight-card li {
+      margin-bottom: 5px;
+    }
+
+    /* Charts Grid */
+    .charts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .chart-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 18px;
+      height: 270px;
+      position: relative;
+    }
+
+    .chart-label {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 12px;
+    }
+
+    /* ==========================================================================
+       WORKFLOW & AUDIT PROGRESSION
+       ========================================================================== */
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .flow-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+    }
+
+    .flow-card.highlight {
+      border-color: var(--border-medium);
+      background: var(--bg-callout);
+    }
+
+    .flow-card h4 {
+      font-size: 13px;
+      font-weight: 600;
+      margin: 6px 0 4px;
+      color: var(--text-primary);
+    }
+
+    .flow-card p {
+      font-size: 12px;
+      color: var(--text-secondary);
+      line-height: 1.45;
+    }
+
+    /* ==========================================================================
+       NOTION DATABASE TABLE & CONTROLS
+       ========================================================================== */
+    .db-header {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-bottom: none;
+      border-radius: 8px 8px 0 0;
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .view-switcher {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .view-btn {
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 4px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.15s;
+    }
+
+    .view-btn:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .view-btn.active {
+      background: var(--bg-card);
+      color: var(--text-primary);
+      font-weight: 600;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .db-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .search-input {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 6px 12px;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 13px;
+      width: 240px;
+      transition: all 0.15s;
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--border-focus);
+      box-shadow: 0 0 0 2px rgba(35, 131, 226, 0.15);
+    }
+
+    .filter-select {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 6px;
+      padding: 6px 10px;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 12.5px;
+      cursor: pointer;
+    }
+
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--border-focus);
+    }
+
+    /* Category Pill Badges Bar */
+    .cat-bar {
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      padding: 8px 16px;
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+
+    .cat-btn {
+      background: none;
+      border: 1px solid transparent;
+      color: var(--text-secondary);
+      padding: 4px 10px;
+      border-radius: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .cat-btn:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .cat-btn.active {
+      background: var(--tag-blue-bg);
+      color: var(--tag-blue-text);
+      font-weight: 600;
+    }
+
+    /* Notion Database Table */
+    .db-table-wrapper {
+      border: 1px solid var(--border-subtle);
+      border-radius: 0 0 8px 8px;
+      overflow-x: auto;
+      background: var(--bg-card);
+    }
+
+    .notion-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      text-align: left;
+    }
+
+    .notion-table th {
+      background: var(--bg-surface);
+      color: var(--text-secondary);
+      font-weight: 500;
+      font-size: 12px;
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      white-space: nowrap;
+    }
+
+    .notion-table th:last-child {
+      border-right: none;
+    }
+
+    .notion-table td {
+      padding: 10px 14px;
+      border-bottom: 1px solid var(--border-subtle);
+      border-right: 1px solid var(--border-subtle);
+      vertical-align: middle;
+    }
+
+    .notion-table td:last-child {
+      border-right: none;
+    }
+
+    .notion-table tr:hover td {
+      background: var(--bg-hover);
+    }
+
+    /* Notion Pastel Tag Badges */
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11.5px;
+      font-weight: 500;
+      line-height: 1.4;
+      white-space: nowrap;
+    }
+
+    .pill-green {
+      background: var(--tag-green-bg);
+      color: var(--tag-green-text);
+    }
+
+    .pill-blue {
+      background: var(--tag-blue-bg);
+      color: var(--tag-blue-text);
+    }
+
+    .pill-orange {
+      background: var(--tag-orange-bg);
+      color: var(--tag-orange-text);
+    }
+
+    .pill-yellow {
+      background: var(--tag-yellow-bg);
+      color: var(--tag-yellow-text);
+    }
+
+    .pill-purple {
+      background: var(--tag-purple-bg);
+      color: var(--tag-purple-text);
+    }
+
+    .pill-red {
+      background: var(--tag-red-bg);
+      color: var(--tag-red-text);
+    }
+
+    .pill-gray {
+      background: var(--tag-gray-bg);
+      color: var(--tag-gray-text);
+    }
+
+    .pill-brown {
+      background: var(--tag-brown-bg);
+      color: var(--tag-brown-text);
+    }
+
+    /* Gallery Grid View */
+    .gallery-grid {
+      display: none;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 14px;
+      padding: 16px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 0 0 8px 8px;
+    }
+
+    .gallery-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 16px;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .gallery-card:hover {
+      border-color: var(--border-medium);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .gallery-card-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 8px;
+    }
+
+    /* Modal / Side-Peek Drawer */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 15, 15, 0.4);
+      backdrop-filter: blur(4px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .modal-sheet {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      max-width: 680px;
+      width: 100%;
+      max-height: 88vh;
+      overflow-y: auto;
+      padding: 28px;
+      box-shadow: var(--shadow-modal);
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      background: none;
+      border: none;
+      color: var(--text-secondary);
+      font-size: 20px;
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 2px 6px;
+    }
+
+    .modal-close:hover {
+      background: var(--bg-hover);
+      color: var(--text-primary);
+    }
+
+    .modal-row {
+      display: flex;
+      margin-bottom: 14px;
+      font-size: 13.5px;
+    }
+
+    .modal-label {
+      width: 140px;
+      color: var(--text-muted);
+      font-size: 12.5px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+
+    .modal-val {
+      flex: 1;
+      color: var(--text-primary);
+    }
+
+    /* Notion Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 24px 0;
+      margin-top: 48px;
+      font-size: 12.5px;
+      color: var(--text-muted);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .top-nav {
+        padding: 0 16px;
+      }
+
+      .search-input {
+        width: 100%;
+      }
+
+      .modal-row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .modal-label {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Notion Navigation Bar -->
+  <nav class="top-nav">
+    <div class="breadcrumb">
+      <span>Workspace</span>
+      <span class="slash">/</span>
+      <span>Composio AI Product Ops</span>
+      <span class="slash">/</span>
+      <span class="current">⚡ 100 Apps Toolkit & MCP Case Study</span>
+    </div>
+
+    <div class="nav-actions">
+      <button class="btn" onclick="exportCSV()">⬇ CSV</button>
+      <button class="btn" onclick="exportJSON()">⬇ JSON</button>
+    </div>
+  </nav>
+
+  <main class="container">
+
+    <!-- Notion Header -->
+    <header class="notion-header">
+      <!-- <div class="page-icon">⚡</div> -->
+      <h1 class="page-title">
+        Composio AI Product Ops — 100 Apps Research & MCP Readiness
+      </h1>
+      <p class="page-subtitle">
+        Autonomous research & multi-loop verification evaluating 100 SaaS applications for toolkit buildability,
+        authentication architectures, gating mechanisms, and Model Context Protocol (MCP) integrations.
+      </p>
+
+      <div class="page-meta-row">
+        <div class="meta-pill">📋 Status: <strong>Complete</strong></div>
+        <div class="meta-pill">🎯 Scope: <strong>100 Apps / 10 Categories</strong></div>
+        <div class="meta-pill">⚡ Engine: <strong>OpenRouter Multi-Pass Agent</strong></div>
+        <div class="meta-pill">🔍 Verification: <strong>+30% Accuracy Progression</strong></div>
+      </div>
+    </header>
+
+    <!-- Notion Callout Box -->
+    <div class="callout">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <h4>Executive Summary & Reviewer Guide</h4>
+        <p>
+          This single-page interactive case study synthesizes the developer ecosystem across 100 customer-requested SaaS
+          platforms.
+          Use the <strong>Table</strong> or <strong>Gallery</strong> views below to filter by category, authentication
+          scheme, and gating model, or click any row to inspect deep technical evidence.
+        </p>
+      </div>
+    </div>
+
+    <!-- KPI Stats Grid -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-header"><span>📊</span> Total Apps Evaluated</div>
+        <div class="stat-val">100 / 100</div>
+        <div class="stat-sub">10 enterprise SaaS domains</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header"><span>⚡</span> Ready Today (Buildability)</div>
+        <div class="stat-val" style="color: var(--tag-green-text);">89%</div>
+        <div class="stat-sub">89 Ready • 11 Gated/Blocked</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header"><span>🔑</span> Auth Dominance</div>
+        <div class="stat-val" style="color: var(--tag-blue-text);">65% OAuth2</div>
+        <div class="stat-sub">40% API Key • 46% PAT/Bearer</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header"><span>🚀</span> Self-Serve Onboarding</div>
+        <div class="stat-val" style="color: var(--tag-purple-text);">77%</div>
+        <div class="stat-sub">Instant sandbox / dev tokens</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-header"><span>🎯</span> Verification Gain</div>
+        <div class="stat-val" style="color: var(--tag-green-text);">+30.0% <span class="pill pill-green"
+            style="font-size:11px;">95% Acc</span></div>
+        <div class="stat-sub">Pass 1: 65% → Pass 2: 95%</div>
+      </div>
+    </div>
+
+    <!-- Section 1: Macro Patterns & Clustering -->
+    <section class="section-block">
+      <div class="section-head">
+        <div class="section-title"><span>1.</span> Macro Industry Patterns & Strategic Synthesis</div>
+      </div>
+
+      <div class="insights-3col">
+        <div class="insight-card">
+          <h3><span class="pill pill-blue">🔑 Auth Dynamics</span></h3>
+          <p><strong>OAuth2 dominates user-delegated SaaS (65%)</strong>, essential for CRM, Helpdesk, and Project
+            Management.</p>
+          <ul>
+            <li><strong>API Key & Bearer Tokens (40-46%)</strong>: Dominant in Developer Infra and Data Scraping for
+              machine-to-machine speed.</li>
+            <li><strong>Hybrid Auth (18%)</strong>: Modern leaders (GitHub, Supabase, Linear) support both OAuth2 and
+              granular Personal Access Tokens.</li>
+          </ul>
+        </div>
+
+        <div class="insight-card">
+          <h3><span class="pill pill-orange">⚡ Gating Friction</span></h3>
+          <p><strong>77% of apps provide friction-free self-serve sandboxes</strong> or free tiers for instant
+            credential generation.</p>
+          <ul>
+            <li><strong>The 23% Gated Barrier</strong>: Concentrated in Enterprise CRM (DealCloud), Finance (PitchBook),
+              and Ads (Google/LinkedIn Partner Review).</li>
+            <li><strong>Marketing Trial False Flag</strong>: Marketing "Free Trial" buttons often mask enterprise sales
+              gates for APIs.</li>
+          </ul>
+        </div>
+
+        <div class="insight-card">
+          <h3><span class="pill pill-purple">🧩 MCP & Quick Wins</span></h3>
+          <p><strong>75% of apps have active MCP servers or native toolkits</strong> (21 Official MCPs, 49 Community, 5
+            Composio native).</p>
+          <ul>
+            <li><strong>83 Immediate Quick Wins</strong>: Scoring 8-10 with open REST/GraphQL specs and instant token
+              generation.</li>
+            <li><strong>10 High-Touch Outreach Apps</strong>: Require partner contracts or commercial vetting (Paygent,
+              DealCloud).</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Charts Row -->
+      <div class="charts-grid">
+        <div class="chart-box">
+          <div class="chart-label">Auth Scheme Distribution (%)</div>
+          <canvas id="authChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <div class="chart-label">Access & Gating Models</div>
+          <canvas id="gatingChart"></canvas>
+        </div>
+        <div class="chart-box">
+          <div class="chart-label">MCP Ecosystem Status</div>
+          <canvas id="mcpChart"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Agent Architecture & Verification Loops -->
+    <section class="section-block">
+      <div class="section-head">
+        <div class="section-title"><span>2.</span> Autonomous Research Pipeline & Verification Loops</div>
+      </div>
+
+      <div class="flow-steps">
+        <div class="flow-card highlight">
+          <span class="pill pill-blue">Pass 1: Autonomous Extraction</span>
+          <h4>Async OpenRouter Agent</h4>
+          <p>Dispatches concurrent LLM workers to extract auth schemas, gating tiers, API surfaces, and docs URLs across
+            100 apps.</p>
+        </div>
+
+        <div class="flow-card highlight">
+          <span class="pill pill-purple">Pass 2: Verification Critic</span>
+          <h4>Automated URL & Critic Loop</h4>
+          <p>Validates HTTP 200 doc liveness and executes a secondary LLM Critic to catch enterprise marketing illusions
+            and sub-product conflation.</p>
+        </div>
+
+        <div class="flow-card">
+          <span class="pill pill-yellow">Pass 3: Human Audit</span>
+          <h4>Stratified Sample Audit</h4>
+          <p>20-app stratified ground-truth audit verifying exact hits and misses, establishing quantifiable accuracy
+            progression curves.</p>
+        </div>
+
+        <div class="flow-card">
+          <span class="pill pill-green">Output: Analytics</span>
+          <h4>Synthesis & Exports</h4>
+          <p>Generates macro pattern clusters and exports clean CSV/JSON datasets powering this Notion-style dashboard.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sample Audit Table -->
+      <div class="db-table-wrapper" style="border-radius: 8px; margin-top: 14px;">
+        <table class="notion-table">
+          <thead>
+            <tr>
+              <th>App & Category</th>
+              <th>Pass 1 Raw Agent Status</th>
+              <th>Pass 2 Verification Loop Action</th>
+              <th>Ground Truth Verdict</th>
+              <th>Audit Gain</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>#1 Salesforce</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span>
+              </td>
+              <td>Overestimated blocker; claimed paid enterprise required.</td>
+              <td>Corrected: Flagged free Salesforce Developer Edition instant Connected App.</td>
+              <td><span class="pill pill-green">✓ Ready Today</span></td>
+              <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
+            </tr>
+            <tr>
+              <td><strong>#10 DealCloud</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span>
+              </td>
+              <td>Hallucinated self-serve signup from marketing portal.</td>
+              <td>Corrected: Detected private Intapp enterprise tenant requirement.</td>
+              <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
+              <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
+            </tr>
+            <tr>
+              <td><strong>#31 Google Ads</strong><br><span
+                  style="color:var(--text-muted); font-size:11px;">Marketing</span></td>
+              <td>Marked self-serve based on Google Cloud Console.</td>
+              <td>Corrected: Flagged mandatory Google Ads API Center Developer Token approval.</td>
+              <td><span class="pill pill-red">✕ Blocked: Partner Gate</span></td>
+              <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
+            </tr>
+            <tr>
+              <td><strong>#44 SF Commerce Cloud</strong><br><span
+                  style="color:var(--text-muted); font-size:11px;">Ecommerce</span></td>
+              <td>Conflated with core Salesforce developer org.</td>
+              <td>Corrected: Differentiated B2C Demandware Account Manager gate.</td>
+              <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
+              <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
+            </tr>
+            <tr>
+              <td><strong>#58 Sherlock</strong><br><span
+                  style="color:var(--text-muted); font-size:11px;">Data/OSINT</span></td>
+              <td>Looked for REST endpoint and marked blocked.</td>
+              <td>Corrected: Identified open-source Python CLI callable via subprocess/container.</td>
+              <td><span class="pill pill-green">✓ Ready Today</span></td>
+              <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
+            </tr>
+            <tr>
+              <td><strong>#90 PitchBook</strong><br><span
+                  style="color:var(--text-muted); font-size:11px;">Finance</span></td>
+              <td>Marked trial available from marketing form.</td>
+              <td>Corrected: Verified strict $25k+/yr institutional enterprise contract gate.</td>
+              <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
+              <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
+            </tr>
+            <tr>
+              <td><strong>#91 NotebookLM</strong><br><span style="color:var(--text-muted); font-size:11px;">AI</span>
+              </td>
+              <td>Conflated consumer UI with Gemini API.</td>
+              <td>Corrected: Noted consumer app is UI-only without standalone public REST API.</td>
+              <td><span class="pill pill-red">✕ Blocked: No Public API</span></td>
+              <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 3: The 100 Apps Notion Database -->
+    <section class="section-block" id="matrix-section">
+      <div class="section-head">
+        <div class="section-title"><span>3.</span> Complete 100 Apps Database Matrix</div>
+        <div id="tableCountDisplay" style="font-size: 13px; color: var(--text-muted);">Showing 100 of 100 apps</div>
+      </div>
+
+      <!-- Database Top Bar -->
+      <div class="db-header">
+        <div class="view-switcher">
+          <button class="view-btn active" id="tableViewBtn" onclick="switchView('table')">📋 Table View</button>
+          <button class="view-btn" id="galleryViewBtn" onclick="switchView('gallery')">🗂 Gallery View</button>
+        </div>
+
+        <div class="db-controls">
+          <input type="text" id="searchInput" class="search-input" placeholder="🔍 Search apps, keywords, auth...">
+
+          <select id="verdictFilter" class="filter-select">
+            <option value="all">All Verdicts</option>
+            <option value="Ready Today">Ready Today (89)</option>
+            <option value="Blocked: Enterprise Only">Blocked: Enterprise Only (5)</option>
+            <option value="Blocked: Partner Gate">Blocked: Partner Gate (3)</option>
+            <option value="Blocked: No Public API">Blocked: No Public API (2)</option>
+            <option value="Community Wrapper Required">Community Wrapper Required (1)</option>
+          </select>
+
+          <select id="gatingFilter" class="filter-select">
+            <option value="all">All Access Models</option>
+            <option value="Self-Serve Free/Trial">Self-Serve Free/Trial (77)</option>
+            <option value="Paid Tier Gate">Paid Tier Gate (13)</option>
+            <option value="Enterprise/Sales Gate">Enterprise/Sales Gate (7)</option>
+            <option value="Partner Application Gate">Partner Application Gate (3)</option>
+          </select>
+
+          <select id="mcpFilter" class="filter-select">
+            <option value="all">All MCP Status</option>
+            <option value="Official MCP">Official MCP (21)</option>
+            <option value="Community MCP">Community MCP (49)</option>
+            <option value="Composio Native">Composio Native (5)</option>
+            <option value="None">None (25)</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filter Pills Bar -->
+      <div class="cat-bar" id="categoryTabs">
+        <button class="cat-btn active" data-cat="all">All Categories (100)</button>
+        <button class="cat-btn" data-cat="1. CRM and Sales">1. CRM & Sales (10)</button>
+        <button class="cat-btn" data-cat="2. Support and Helpdesk">2. Support & Helpdesk (10)</button>
+        <button class="cat-btn" data-cat="3. Communications and Messaging">3. Comms & Messaging (10)</button>
+        <button class="cat-btn" data-cat="4. Marketing, Ads, Email and Social">4. Marketing & Ads (10)</button>
+        <button class="cat-btn" data-cat="5. Ecommerce">5. Ecommerce (10)</button>
+        <button class="cat-btn" data-cat="6. Data, SEO and Scraping">6. Data & Scraping (10)</button>
+        <button class="cat-btn" data-cat="7. Developer, Infra and Data platforms">7. Dev & Infra (10)</button>
+        <button class="cat-btn" data-cat="8. Productivity and Project Management">8. Productivity (10)</button>
+        <button class="cat-btn" data-cat="9. Finance and Fintech">9. Finance & Fintech (10)</button>
+        <button class="cat-btn" data-cat="10. AI, Research and Media-native">10. AI & Media (10)</button>
+      </div>
+
+      <!-- Table View -->
+      <div class="db-table-wrapper" id="tableViewContainer">
+        <table class="notion-table" id="appsTable">
+          <thead>
+            <tr>
+              <th style="width: 45px;">#</th>
+              <th>App Name & Category</th>
+              <th>Auth Method(s)</th>
+              <th>Access & Gating</th>
+              <th>MCP Status</th>
+              <th>Buildability Verdict</th>
+              <th style="width: 70px;">Score</th>
+              <th style="width: 80px;">Docs</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody">
+            <!-- Populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Gallery View -->
+      <div class="gallery-grid" id="galleryViewContainer">
+        <!-- Populated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Notion Footer -->
+    <footer>
+      <div>Composio AI Product Operations Case Study • Multi-Pass Research Pipeline</div>
+      <div>Built with OpenRouter LLM + Notion Design System</div>
+    </footer>
+
+  </main>
+
+  <!-- Notion Side Peek / Modal Detail Sheet -->
+  <div class="modal-overlay" id="detailModal">
+    <div class="modal-sheet">
+      <button class="modal-close" onclick="closeModal()">&times;</button>
+
+      <div
+        style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
+        <span id="modalIcon" style="font-size: 28px;">📦</span>
+        <div>
+          <h2 id="modalAppName" style="font-size: 20px; font-weight: 700; color: var(--text-primary);">App Name</h2>
+          <p id="modalAppCategory" style="font-size: 12px; color: var(--text-secondary);">Category</p>
+        </div>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-label">One-Liner</div>
+        <div class="modal-val" id="modalOneLiner" style="font-weight: 500;"></div>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-label">Auth Schemes</div>
+        <div class="modal-val" id="modalAuthTags" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-label">Access Model</div>
+        <div class="modal-val" id="modalGatingDetails"></div>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-label">API Surface</div>
+        <div class="modal-val" id="modalApiSurface"
+          style="font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--bg-surface); padding: 8px 10px; border-radius: 6px;">
+        </div>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-label">MCP Integration</div>
+        <div class="modal-val" id="modalMcpDetails"></div>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-label">Buildability</div>
+        <div class="modal-val" id="modalBlocker"></div>
+      </div>
+
+      <div class="modal-row">
+        <div class="modal-label">Verification Audit</div>
+        <div class="modal-val" id="modalVerificationNotes" style="font-size: 12.5px; color: var(--text-secondary);">
+        </div>
+      </div>
+
+      <div
+        style="display: flex; gap: 10px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+        <a id="modalDocsBtn" href="#" target="_blank" class="btn btn-primary">📖 Open Official Developer Docs ↗</a>
+        <button class="btn" onclick="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let appsData = [];
+    let currentCategory = 'all';
+    let currentView = 'table';
+    let charts = {};
+
+    // 1. View Switcher (Table vs Gallery)
+    function switchView(view) {
+      currentView = view;
+      document.getElementById('tableViewBtn').classList.toggle('active', view === 'table');
+      document.getElementById('galleryViewBtn').classList.toggle('active', view === 'gallery');
+      document.getElementById('tableViewContainer').style.display = view === 'table' ? 'block' : 'none';
+      document.getElementById('galleryViewContainer').style.display = view === 'gallery' ? 'grid' : 'none';
+      renderView();
+    }
+
+    // 2. Data Loading
+    async function loadData() {
+      try {
+        const response = await fetch('./data/pass2_verified.json');
+        appsData = await response.json();
+        renderView();
+        initCharts();
+      } catch (err) {
+        console.error('Failed loading data JSON:', err);
+      }
+    }
+
+    function getFilteredData() {
+      const search = document.getElementById('searchInput').value.toLowerCase();
+      const verdict = document.getElementById('verdictFilter').value;
+      const gating = document.getElementById('gatingFilter').value;
+      const mcp = document.getElementById('mcpFilter').value;
+
+      return appsData.filter(app => {
+        if (currentCategory !== 'all' && app.category !== currentCategory) return false;
+        if (verdict !== 'all' && app.buildability_verdict !== verdict) return false;
+        if (gating !== 'all' && app.gating_type !== gating) return false;
+        if (mcp !== 'all' && app.mcp_status !== mcp) return false;
+
+        if (search) {
+          const hay = `${app.name} ${app.category} ${app.one_liner} ${app.auth_methods.join(' ')} ${app.buildability_verdict} ${app.main_blocker} ${app.api_surface}`.toLowerCase();
+          if (!hay.includes(search)) return false;
+        }
+
+        return true;
+      });
+    }
+
+    function renderView() {
+      const filtered = getFilteredData();
+      document.getElementById('tableCountDisplay').innerText = `Showing ${filtered.length} of ${appsData.length} apps`;
+
+      if (currentView === 'table') {
+        renderTable(filtered);
+      } else {
+        renderGallery(filtered);
+      }
+    }
+
+    function renderTable(filtered) {
+      const tbody = document.getElementById('tableBody');
+      tbody.innerHTML = '';
+
+      filtered.forEach(app => {
+        const tr = document.createElement('tr');
+        tr.style.cursor = 'pointer';
+        tr.onclick = () => openModal(app);
+
+        // Verdict Badge
+        let verdictBadge = '';
+        if (app.buildability_verdict === 'Ready Today') {
+          verdictBadge = `<span class="pill pill-green">✓ Ready Today</span>`;
+        } else if (app.buildability_verdict.includes('Blocked')) {
+          verdictBadge = `<span class="pill pill-red">✕ ${app.buildability_verdict.replace('Blocked: ', '')}</span>`;
+        } else {
+          verdictBadge = `<span class="pill pill-yellow">⚠ Wrapper Req</span>`;
+        }
+
+        // Gating Badge
+        let gatingBadge = '';
+        if (app.gating_type.includes('Self-Serve')) {
+          gatingBadge = `<span class="pill pill-green">⚡ Self-Serve</span>`;
+        } else if (app.gating_type.includes('Paid')) {
+          gatingBadge = `<span class="pill pill-yellow">💳 Paid Plan</span>`;
+        } else if (app.gating_type.includes('Enterprise')) {
+          gatingBadge = `<span class="pill pill-red">🏢 Enterprise</span>`;
+        } else {
+          gatingBadge = `<span class="pill pill-purple">🤝 Partner Gate</span>`;
+        }
+
+        // MCP Badge
+        let mcpBadge = '';
+        if (app.mcp_status === 'Official MCP') {
+          mcpBadge = `<span class="pill pill-purple">★ Official MCP</span>`;
+        } else if (app.mcp_status === 'Community MCP') {
+          mcpBadge = `<span class="pill pill-blue">👥 Community</span>`;
+        } else if (app.mcp_status === 'Composio Native') {
+          mcpBadge = `<span class="pill pill-blue">⚡ Composio</span>`;
+        } else {
+          mcpBadge = `<span class="pill pill-gray">None</span>`;
+        }
+
+        // Score Badge
+        const score = app.easy_win_score || 5;
+        let scoreClass = 'pill-yellow';
+        if (score >= 9) scoreClass = 'pill-green';
+        else if (score <= 4) scoreClass = 'pill-red';
+
+        const authTags = (app.auth_methods || []).slice(0, 2).map(a => `<span class="pill pill-gray">${a}</span>`).join(' ');
+
+        tr.innerHTML = `
+          <td style="color: var(--text-muted); font-family: monospace; font-weight: 500;">${app.id}</td>
+          <td>
+            <div style="font-weight: 600; color: var(--text-primary); font-size: 13.5px;">${app.name}</div>
+            <div style="font-size: 11px; color: var(--text-secondary);">${app.category}</div>
+          </td>
+          <td>${authTags}</td>
+          <td>${gatingBadge}</td>
+          <td>${mcpBadge}</td>
+          <td>${verdictBadge}</td>
+          <td><span class="pill ${scoreClass}">${score}/10</span></td>
+          <td><a href="${app.evidence_url}" target="_blank" onclick="event.stopPropagation()" style="font-size: 12px;">Docs ↗</a></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function renderGallery(filtered) {
+      const container = document.getElementById('galleryViewContainer');
+      container.innerHTML = '';
+
+      filtered.forEach(app => {
+        const card = document.createElement('div');
+        card.className = 'gallery-card';
+        card.onclick = () => openModal(app);
+
+        let verdictBadge = app.buildability_verdict === 'Ready Today'
+          ? `<span class="pill pill-green">✓ Ready</span>`
+          : `<span class="pill pill-red">✕ Gated</span>`;
+
+        card.innerHTML = `
+          <div class="gallery-card-head">
+            <div>
+              <div style="font-size: 15px; font-weight: 700; color: var(--text-primary);">#${app.id} ${app.name}</div>
+              <div style="font-size: 11.5px; color: var(--text-secondary); margin-top: 2px;">${app.category}</div>
+            </div>
+            ${verdictBadge}
+          </div>
+          <p style="font-size: 12.5px; color: var(--text-secondary); margin: 10px 0; line-height: 1.45;">${app.one_liner}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 4px; margin-top: 10px;">
+            <span class="pill pill-gray">${app.auth_methods[0] || 'Auth'}</span>
+            <span class="pill pill-blue">${app.mcp_status}</span>
+            <span class="pill pill-purple">${app.gating_type.split(' ')[0]}</span>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function openModal(app) {
+      document.getElementById('modalAppName').innerText = `#${app.id} ${app.name}`;
+      document.getElementById('modalAppCategory').innerText = app.category;
+      document.getElementById('modalOneLiner').innerText = app.one_liner;
+
+      const authContainer = document.getElementById('modalAuthTags');
+      authContainer.innerHTML = (app.auth_methods || []).map(a => `<span class="pill pill-gray">${a}</span>`).join(' ');
+
+      document.getElementById('modalGatingDetails').innerHTML = `<span class="pill pill-blue">${app.gating_type}</span> <span style="margin-left:6px; color:var(--text-secondary); font-size:13px;">${app.gating_details || ''}</span>`;
+      document.getElementById('modalApiSurface').innerText = app.api_surface || 'REST API';
+      document.getElementById('modalMcpDetails').innerHTML = `<span class="pill pill-purple">${app.mcp_status}</span> <span style="margin-left:6px; color:var(--text-secondary); font-size:13px;">${app.mcp_details || 'Ready for Composio tool wrapping'}</span>`;
+
+      let verdictPill = app.buildability_verdict === 'Ready Today' ? 'pill-green' : 'pill-red';
+      document.getElementById('modalBlocker').innerHTML = `<span class="pill ${verdictPill}">${app.buildability_verdict}</span> <div style="margin-top:4px; font-size:13px; color:var(--text-secondary);">${app.main_blocker || 'None'}</div>`;
+
+      document.getElementById('modalVerificationNotes').innerText = (app.corrections_made && app.corrections_made.length > 0) ? app.corrections_made.join(' • ') : 'Verified accurate against official documentation in Pass 2.';
+      document.getElementById('modalDocsBtn').href = app.evidence_url;
+
+      document.getElementById('detailModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('detailModal').style.display = 'none';
+    }
+
+    // Category Tabs Event Listeners
+    document.querySelectorAll('.cat-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentCategory = btn.getAttribute('data-cat');
+        renderView();
+      });
+    });
+
+    document.getElementById('searchInput').addEventListener('input', renderView);
+    document.getElementById('verdictFilter').addEventListener('change', renderView);
+    document.getElementById('gatingFilter').addEventListener('change', renderView);
+    document.getElementById('mcpFilter').addEventListener('change', renderView);
+
+    // Export Helpers
+    function exportCSV() {
+      window.location.href = './data/final_research_100_apps.csv';
+    }
+
+    function exportJSON() {
+      window.location.href = './data/pass2_verified.json';
+    }
+
+    // Chart.js Visualizations in Notion Light Mode Colors
+    function initCharts() {
+      Chart.defaults.color = '#787774';
+      Chart.defaults.font.family = "'Inter', sans-serif";
+
+      // 1. Auth Chart
+      charts.auth = new Chart(document.getElementById('authChart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['OAuth2', 'API Key', 'Bearer / PAT', 'Basic Auth', 'Other'],
+          datasets: [{
+            data: [65, 40, 46, 4, 3],
+            backgroundColor: ['#2383e2', '#008da5', '#9065b0', '#cb912f', '#9b9a97'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'right', labels: { boxWidth: 10, font: { size: 11 } } } }
+        }
+      });
+
+      // 2. Gating Chart
+      charts.gating = new Chart(document.getElementById('gatingChart'), {
+        type: 'bar',
+        data: {
+          labels: ['Self-Serve', 'Paid Plan', 'Enterprise', 'Partner Gate'],
+          datasets: [{
+            label: 'Apps Count',
+            data: [77, 13, 7, 3],
+            backgroundColor: ['#2b8a3e', '#cb912f', '#eb5757', '#9065b0'],
+            borderRadius: 4
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { display: false } },
+          scales: {
+            y: { grid: { color: '#e9e9e7' } },
+            x: { grid: { display: false } }
+          }
+        }
+      });
+
+      // 3. MCP Chart
+      charts.mcp = new Chart(document.getElementById('mcpChart'), {
+        type: 'doughnut',
+        data: {
+          labels: ['Community MCP (49)', 'Official MCP (21)', 'Composio Native (5)', 'No MCP (25)'],
+          datasets: [{
+            data: [49, 21, 5, 25],
+            backgroundColor: ['#008da5', '#9065b0', '#2383e2', '#9b9a97'],
+            borderWidth: 0
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: { legend: { position: 'right', labels: { boxWidth: 10, font: { size: 11 } } } }
+        }
+      });
+    }
+
+    window.onload = loadData;
+  </script>
+</body>
+
+</html>

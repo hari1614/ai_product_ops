@@ -1,0 +1,3255 @@
+[
+  {
+    "Category": "CRM and Sales",
+    "1-line product purpose": "A cloud-based CRM solution for sales, marketing, and customer service teams.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth",
+      "Session Cookie"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": true,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": true
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developer.salesforce.com/docs",
+    "Easy Win Score": 8,
+    "id": 1,
+    "name": "Salesforce",
+    "category": "1. CRM and Sales",
+    "hint_url": "salesforce.com"
+  },
+  {
+    "Category": "CRM and Sales",
+    "1-line product purpose": "All-in-one CRM, sales, marketing, and customer service platform",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Session Cookie"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": true,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developers.hubspot.com/docs",
+    "Easy Win Score": 8,
+    "id": 2,
+    "name": "HubSpot",
+    "category": "1. CRM and Sales",
+    "hint_url": "hubspot.com"
+  },
+  {
+    "category": "1. CRM and Sales",
+    "product_purpose": "A sales, CRM, and pipeline management tool for businesses.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcps_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration.",
+    "evidence_url": "https://pipedrive.com/api",
+    "easy_win_score": 0,
+    "id": 3,
+    "name": "Pipedrive",
+    "hint_url": "pipedrive.com"
+  },
+  {
+    "Category": "CRM and Sales",
+    "Product Purpose": "Automate sales workflows and streamline customer relationships",
+    "Authentication Methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": "No official or community Model Context Protocol (MCP) server exists",
+    "Buildability Verdict": "Blocked: No Public API",
+    "Main Blocker": "Attio does not provide a public API for integration, only offering a private API for partners",
+    "Evidence URL": "https://attio.com/docs/api",
+    "Easy Win Score": 2,
+    "id": 4,
+    "name": "Attio",
+    "category": "1. CRM and Sales",
+    "hint_url": "attio.com"
+  },
+  {
+    "Category": "CRM and Sales",
+    "1-line product purpose": "An open-source CRM for sales teams to manage contacts, leads, and opportunities.",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": true,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": true
+    },
+    "Buildability Verdict": "Community Wrapper Required",
+    "Main Blocker": "Community MCP server is not officially maintained by Twenty, but a community wrapper can be created.",
+    "Evidence URL": "https://developers.twenty.com/docs/",
+    "Easy Win Score": 8,
+    "id": 5,
+    "name": "Twenty",
+    "category": "1. CRM and Sales",
+    "hint_url": "twenty.com (open-source CRM)"
+  },
+  {
+    "Category": "CRM and Sales",
+    "1-line product purpose": "A cloud-based work platform that enables teams to collaborate and automate workflows.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developers.podio.com/",
+    "Easy Win Score": 8,
+    "id": 6,
+    "name": "Podio",
+    "category": "1. CRM and Sales",
+    "hint_url": "podio.com"
+  },
+  {
+    "Category": "CRM and Sales",
+    "1-line product purpose": "Manage sales, marketing, and customer service with a cloud-based CRM",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://www.zoho.com/crm/api/docs/",
+    "Easy Win Score": 8,
+    "id": 7,
+    "name": "Zoho CRM",
+    "category": "1. CRM and Sales",
+    "hint_url": "zoho.com/crm"
+  },
+  {
+    "Category": "CRM and Sales",
+    "1-line product purpose": "Close is a sales CRM that helps teams sell more by streamlining their sales process and providing real-time analytics.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": "No official MCP server exists, but a community MCP server might be available.",
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developer.close.com/",
+    "Easy Win Score": 8,
+    "id": 8,
+    "name": "Close",
+    "category": "1. CRM and Sales",
+    "hint_url": "close.com"
+  },
+  {
+    "category": "1. CRM and Sales",
+    "product_purpose": "All-in-one CRM and sales platform for businesses",
+    "authentication_methods": {
+      "oauth2": true,
+      "api_key": true,
+      "personal_access_token": true,
+      "basic_auth": false,
+      "session_cookie": false,
+      "webhook_hmac": false
+    },
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false,
+      "composio_toolkit": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://docs.copper.com/api/",
+    "easy_win_score": 0,
+    "id": 9,
+    "name": "Copper",
+    "hint_url": "copper.com"
+  },
+  {
+    "app_id": 10,
+    "app_name": "DealCloud",
+    "category": "1. CRM and Sales",
+    "one_line_product_purpose": "Cloud-based CRM and sales platform for private equity, venture capital, and other alternative investment firms.",
+    "authentication_methods": [],
+    "access_gating": {
+      "self_serve_free_trial": false,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": true,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": false,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": "No Official Server",
+    "buildability_verdict": "Blocked: Enterprise Only",
+    "main_blocker": "Requires talking to sales/enterprise contract to get API access",
+    "evidence_url": "https://api.docs.dealcloud.com/",
+    "easy_win_score": 0,
+    "id": 10,
+    "name": "DealCloud",
+    "hint_url": "api.docs.dealcloud.com"
+  },
+  {
+    "app_id": 11,
+    "app_name": "Zendesk",
+    "category": "2. Support and Helpdesk",
+    "website": "https://www.zendesk.com/",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.zendesk.com/documentation/",
+    "easy_win_score": 8,
+    "id": 11,
+    "name": "Zendesk",
+    "hint_url": "zendesk.com"
+  },
+  {
+    "app_id": 12,
+    "app_name": "Intercom",
+    "category": "2. Support and Helpdesk",
+    "one_line_product_purpose": "Customer messaging platform for support, sales, and marketing teams",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Session Cookie"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.intercom.com/docs",
+    "easy_win_score": 8,
+    "id": 12,
+    "name": "Intercom",
+    "hint_url": "intercom.com"
+  },
+  {
+    "app_id": 13,
+    "app_name": "Freshdesk",
+    "category": "2. Support and Helpdesk",
+    "website": "freshdesk.com",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.freshdesk.com/v2/docs/",
+    "easy_win_score": 8,
+    "id": 13,
+    "name": "Freshdesk",
+    "hint_url": "freshdesk.com"
+  },
+  {
+    "Category": "2. Support and Helpdesk",
+    "1-line product purpose": "Front is a customer communication platform that helps teams manage customer interactions across multiple channels.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official MCP server exists, but a community server might be available.",
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developers.front.com/",
+    "Easy Win Score": 8,
+    "id": 14,
+    "name": "Front",
+    "category": "2. Support and Helpdesk",
+    "hint_url": "front.com"
+  },
+  {
+    "id": 15,
+    "name": "Pylon",
+    "category": "2. Support and Helpdesk",
+    "hint_url": "usepylon.com",
+    "one_liner": "Error fetching data",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "gating_type": "Unknown",
+    "gating_details": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117415 tokens, but can only afford 7386. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 429, 'message': 'Provider returned error', 'provider_name': 'Novita', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'DeepInfra', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117415 tokens, but can only afford 20313. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 28251 tokens, but can only afford 5662. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_31lRhUuI6QUj8S7aZAYHnbARvuM'}",
+    "api_surface": "Unknown",
+    "mcp_status": "None",
+    "mcp_details": "",
+    "buildability_verdict": "Blocked: Investigation Needed",
+    "main_blocker": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117415 tokens, but can only afford 7386. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 429, 'message': 'Provider returned error', 'provider_name': 'Novita', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'DeepInfra', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117415 tokens, but can only afford 20313. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 28251 tokens, but can only afford 5662. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_31lRhUuI6QUj8S7aZAYHnbARvuM'}",
+    "evidence_url": "https://usepylon.com",
+    "easy_win_score": 1
+  },
+  {
+    "Category": "2. Support and Helpdesk",
+    "Product Purpose": "LiveAgent is a helpdesk and customer service software that enables businesses to manage customer interactions and provide support through various channels.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official MCP server exists, but a community MCP server might be available.",
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://www.liveagent.com/api-documentation/",
+    "Easy Win Score": 6,
+    "id": 16,
+    "name": "LiveAgent",
+    "category": "2. Support and Helpdesk",
+    "hint_url": "liveagent.com"
+  },
+  {
+    "app_id": 17,
+    "app_name": "Plain",
+    "category": "2. Support and Helpdesk",
+    "one_line_product_purpose": "A helpdesk and support ticketing system for teams.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.plain.com/",
+    "easy_win_score": 8,
+    "id": 17,
+    "name": "Plain",
+    "hint_url": "plain.com"
+  },
+  {
+    "Category": "2. Support and Helpdesk",
+    "1-line product purpose": "Help Scout is a cloud-based customer service platform that helps teams manage and resolve customer support tickets efficiently.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developer.helpscout.com/",
+    "Easy Win Score": 8,
+    "id": 18,
+    "name": "Help Scout",
+    "category": "2. Support and Helpdesk",
+    "hint_url": "helpscout.com"
+  },
+  {
+    "app_id": 19,
+    "app_name": "Gorgias",
+    "category": "2. Support and Helpdesk",
+    "one_line_product_purpose": "Helpdesk and customer support platform for e-commerce businesses",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": "No official MCP server exists, but a community MCP server might be available",
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Gorgias does not provide a public API for external access, only offering a private API for their own integrations",
+    "evidence_url": "https://support.gorgias.com/hc/en-us/articles/360046133454-API-Documentation",
+    "easy_win_score": 0,
+    "id": 19,
+    "name": "Gorgias",
+    "hint_url": "gorgias.com"
+  },
+  {
+    "Category": "2. Support and Helpdesk",
+    "1-line product purpose": "Gladly is a customer experience platform that helps businesses deliver exceptional customer service.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official MCP server exists, but a community MCP server might be available.",
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://docs.gladly.com/docs/api-introduction",
+    "Easy Win Score": 8,
+    "id": 20,
+    "name": "Gladly",
+    "category": "2. Support and Helpdesk",
+    "hint_url": "gladly.com"
+  },
+  {
+    "Category": "Communications and Messaging",
+    "1-line product purpose": "A communication platform for teams to share information and collaborate",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Session Cookie"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": true,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": true
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://api.slack.com/docs/authentication",
+    "Easy Win Score": 8,
+    "id": 21,
+    "name": "Slack",
+    "category": "3. Communications and Messaging",
+    "hint_url": "slack.com"
+  },
+  {
+    "Category": "Communications and Messaging",
+    "1-line product purpose": "A cloud communication platform for building, scaling, and operating real-time communication and messaging applications.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://www.twilio.com/docs/api",
+    "Easy Win Score": 8,
+    "id": 22,
+    "name": "Twilio",
+    "category": "3. Communications and Messaging",
+    "hint_url": "twilio.com"
+  },
+  {
+    "Category": "Communications and Messaging",
+    "1-line product purpose": "A team collaboration and communication platform",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developer.zoho.com/cliq/api/v1/",
+    "Easy Win Score": 8,
+    "id": 23,
+    "name": "Zoho Cliq",
+    "category": "3. Communications and Messaging",
+    "hint_url": "zoho.com/cliq"
+  },
+  {
+    "Category": "Communications and Messaging",
+    "1-line product purpose": "An all-in-one workplace collaboration platform",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://open.larksuite.com/docs/api/",
+    "Easy Win Score": 8,
+    "id": 24,
+    "name": "Lark (Larksuite)",
+    "category": "3. Communications and Messaging",
+    "hint_url": "open.larksuite.com"
+  },
+  {
+    "app_id": 25,
+    "app_name": "Pumble",
+    "category": "3. Communications and Messaging",
+    "one_line_product_purpose": "A team communication platform for businesses.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_and_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration.",
+    "evidence_url": "https://pumble.com/api",
+    "easy_win_score": 0,
+    "id": 25,
+    "name": "Pumble",
+    "hint_url": "pumble.com"
+  },
+  {
+    "app_id": 26,
+    "app_name": "Discord",
+    "category": "3. Communications and Messaging",
+    "product_purpose": "A platform for communities to communicate and share content.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcps_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Discord's API is not publicly accessible, and the platform is primarily designed for user interaction rather than developer integration.",
+    "evidence_url": "https://discord.com/developers/docs",
+    "easy_win_score": 2,
+    "id": 26,
+    "name": "Discord",
+    "hint_url": "discord.com"
+  },
+  {
+    "app_id": 27,
+    "app_name": "Telegram",
+    "category": "3. Communications and Messaging",
+    "one_line_product_purpose": "A cloud-based mobile and desktop messaging app with a focus on security and speed.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": true,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://core.telegram.org/api",
+    "easy_win_score": 8,
+    "id": 27,
+    "name": "Telegram",
+    "hint_url": "core.telegram.org"
+  },
+  {
+    "Category": "Communications and Messaging",
+    "Product Purpose": "Enable businesses to interact with customers on WhatsApp",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": false,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": true,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Blocked: Enterprise Only",
+    "Main Blocker": "Requires talking to sales/enterprise contract to get API access",
+    "Evidence URL": "https://developers.facebook.com/docs/whatsapp/api/",
+    "Easy Win Score": 2,
+    "id": 28,
+    "name": "WhatsApp Business",
+    "category": "3. Communications and Messaging",
+    "hint_url": "developers.facebook.com/docs/whatsapp"
+  },
+  {
+    "app_id": 29,
+    "app_name": "Aircall",
+    "category": "3. Communications and Messaging",
+    "one_line_product_purpose": "A cloud-based call center software for sales teams to manage customer interactions.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.aircall.io/reference",
+    "easy_win_score": 8,
+    "id": 29,
+    "name": "Aircall",
+    "hint_url": "aircall.io"
+  },
+  {
+    "app_id": 30,
+    "app_name": "Vonage",
+    "category": "3. Communications and Messaging",
+    "one_line_product_purpose": "Communications platform as a service (CPaaS) for messaging, voice, and video APIs.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.vonage.com/docs",
+    "easy_win_score": 8,
+    "id": 30,
+    "name": "Vonage",
+    "hint_url": "developer.vonage.com"
+  },
+  {
+    "Category": "Marketing, Ads, Email and Social",
+    "1-line product purpose": "Google Ads is a platform for creating, managing, and optimizing online advertising campaigns.",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developers.google.com/google-ads/docs",
+    "Easy Win Score": 8,
+    "id": 31,
+    "name": "Google Ads",
+    "category": "4. Marketing, Ads, Email and Social",
+    "hint_url": "developers.google.com/google-ads"
+  },
+  {
+    "Category": "Marketing, Ads, Email and Social",
+    "Product Purpose": "Access to Meta's advertising APIs to manage and optimize ad campaigns across various platforms.",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": true,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://developers.facebook.com/docs/marketing-apis/",
+    "Easy Win Score": 8,
+    "id": 32,
+    "name": "Meta Ads",
+    "category": "4. Marketing, Ads, Email and Social",
+    "hint_url": "developers.facebook.com/docs/marketing-apis"
+  },
+  {
+    "app_id": 33,
+    "app_name": "LinkedIn Ads",
+    "category": "4. Marketing, Ads, Email and Social",
+    "website": "https://learn.microsoft.com/linkedin/marketing",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "LinkedIn Ads API is not publicly available. It requires a LinkedIn Ads account and a Microsoft Advertising account to access the API.",
+    "evidence_url": "https://learn.microsoft.com/linkedin/marketing/ads-api/",
+    "easy_win_score": 0,
+    "id": 33,
+    "name": "LinkedIn Ads",
+    "hint_url": "learn.microsoft.com/linkedin/marketing"
+  },
+  {
+    "Category": "Marketing, Ads, Email and Social",
+    "1-line product purpose": "All-in-one marketing and sales automation platform for agencies and entrepreneurs.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official MCP server exists, but a community wrapper might be available.",
+    "Buildability Verdict": "Community Wrapper Required",
+    "Main Blocker": "Limited API surface and lack of official MCP server.",
+    "Evidence URL": "https://highlevel.stoplight.io/docs/highlevel-api-docs",
+    "Easy Win Score": 4,
+    "id": 34,
+    "name": "GoHighLevel",
+    "category": "4. Marketing, Ads, Email and Social",
+    "hint_url": "highlevel.stoplight.io"
+  },
+  {
+    "Category & 1-line product purpose": "Marketing, Ads, Email and Social - Email marketing platform for businesses and organizations.",
+    "Authentication methods": "OAuth2, API Key, Personal Access Token (PAT)",
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": "No official or community Model Context Protocol (MCP) server exists.",
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://mailchimp.com/developer/",
+    "Easy Win Score": 8,
+    "id": 35,
+    "name": "Mailchimp",
+    "category": "4. Marketing, Ads, Email and Social",
+    "hint_url": "mailchimp.com/developer"
+  },
+  {
+    "app_id": 36,
+    "app_name": "Klaviyo",
+    "category": "4. Marketing, Ads, Email and Social",
+    "one_line_product_purpose": "All-in-one marketing automation platform for e-commerce businesses",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.klaviyo.com/docs/api",
+    "easy_win_score": 8,
+    "id": 36,
+    "name": "Klaviyo",
+    "hint_url": "developers.klaviyo.com"
+  },
+  {
+    "Category": "Marketing, Ads, Email and Social",
+    "1-line product purpose": "All-in-one marketing automation and sales funnel builder platform.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://systeme.io/api-documentation/",
+    "Easy Win Score": 6,
+    "id": 37,
+    "name": "systeme.io",
+    "category": "4. Marketing, Ads, Email and Social",
+    "hint_url": "systeme.io (funnel builder)"
+  },
+  {
+    "app_id": 38,
+    "app_name": "Pinterest",
+    "category": "4. Marketing, Ads, Email and Social",
+    "website": "https://developers.pinterest.com",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.pinterest.com/docs/getting-started/authentication/",
+    "easy_win_score": 8,
+    "id": 38,
+    "name": "Pinterest",
+    "hint_url": "developers.pinterest.com"
+  },
+  {
+    "app_id": 39,
+    "app_name": "Threads (Meta)",
+    "category": "4. Marketing, Ads, Email and Social",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": false,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": true,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Blocked: Enterprise Only",
+    "main_blocker": "Requires talking to sales/enterprise contract to get API access",
+    "evidence_url": "https://developers.facebook.com/docs/threads",
+    "easy_win_score": 2,
+    "id": 39,
+    "name": "Threads (Meta)",
+    "hint_url": "developers.facebook.com/docs/threads"
+  },
+  {
+    "app_id": 40,
+    "app_name": "SendGrid",
+    "category": "4. Marketing, Ads, Email and Social",
+    "website": "sendgrid.com",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://docs.sendgrid.com/api-reference/getting-started",
+    "easy_win_score": 8,
+    "id": 40,
+    "name": "SendGrid",
+    "hint_url": "sendgrid.com"
+  },
+  {
+    "app_id": 41,
+    "app_name": "Shopify",
+    "category": "5. Ecommerce",
+    "product_purpose": "An all-in-one commerce platform to design, set up, and manage your store across various sales channels.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": true,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": true,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://shopify.dev/api/overview",
+    "easy_win_score": 8,
+    "id": 41,
+    "name": "Shopify",
+    "hint_url": "shopify.dev"
+  },
+  {
+    "app_id": 42,
+    "app_name": "WooCommerce",
+    "category": "5. Ecommerce",
+    "product_purpose": "An e-commerce plugin for WordPress that provides a comprehensive set of features for managing online stores.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://woocommerce.com/document/woocommerce-rest-api/",
+    "easy_win_score": 8,
+    "id": 42,
+    "name": "WooCommerce",
+    "hint_url": "woocommerce.com/document/woocommerce-rest-api"
+  },
+  {
+    "app_id": 43,
+    "app_name": "BigCommerce",
+    "category": "5. Ecommerce",
+    "product_purpose": "An e-commerce platform for creating and managing online stores.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.bigcommerce.com/api-reference/getting-started/api-introduction",
+    "easy_win_score": 8,
+    "id": 43,
+    "name": "BigCommerce",
+    "hint_url": "developer.bigcommerce.com"
+  },
+  {
+    "app_id": 44,
+    "app_name": "Salesforce Commerce Cloud",
+    "category": "5. Ecommerce",
+    "one_line_product_purpose": "Unified commerce platform for B2B and B2C businesses",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.salesforce.com/docs/commerce",
+    "easy_win_score": 8,
+    "id": 44,
+    "name": "Salesforce Commerce Cloud",
+    "hint_url": "developer.salesforce.com/docs/commerce"
+  },
+  {
+    "app_id": 45,
+    "app_name": "Magento (Adobe Commerce)",
+    "category": "5. Ecommerce",
+    "website": "developer.adobe.com/commerce",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": true,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.adobe.com/commerce/docs/developer/get-started/",
+    "easy_win_score": 8,
+    "id": 45,
+    "name": "Magento (Adobe Commerce)",
+    "hint_url": "developer.adobe.com/commerce"
+  },
+  {
+    "app_id": 46,
+    "app_name": "Squarespace",
+    "category": "5. Ecommerce",
+    "product_purpose": "All-in-one website building and management platform for businesses and individuals.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Squarespace does not provide a public API for developers to integrate with. The platform is designed for website building and management, and does not offer an API for external integration.",
+    "evidence_url": "https://developers.squarespace.com/",
+    "easy_win_score": 0,
+    "id": 46,
+    "name": "Squarespace",
+    "hint_url": "developers.squarespace.com"
+  },
+  {
+    "app_id": 47,
+    "app_name": "Ecwid",
+    "category": "5. Ecommerce",
+    "product_purpose": "Ecommerce platform for creating and managing online stores",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://api-docs.ecwid.com/docs",
+    "easy_win_score": 8,
+    "id": 47,
+    "name": "Ecwid",
+    "hint_url": "api-docs.ecwid.com"
+  },
+  {
+    "app_id": 48,
+    "app_name": "Gumroad",
+    "category": "5. Ecommerce",
+    "product_purpose": "Sell digital products directly to customers",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.gumroad.com/docs",
+    "easy_win_score": 8,
+    "id": 48,
+    "name": "Gumroad",
+    "hint_url": "gumroad.com/api"
+  },
+  {
+    "app_id": 49,
+    "app_name": "Amazon Selling Partner",
+    "category": "5. Ecommerce",
+    "product_purpose": "Provides APIs for Amazon sellers to manage their products, orders, and inventory.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer-docs.amazon.com/sp-api",
+    "easy_win_score": 8,
+    "id": 49,
+    "name": "Amazon Selling Partner",
+    "hint_url": "developer-docs.amazon.com/sp-api"
+  },
+  {
+    "app_id": 50,
+    "app_name": "fanbasis",
+    "category": "5. Ecommerce",
+    "product_purpose": "Fan engagement and loyalty platform for businesses",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://fanbasis.com/developers",
+    "easy_win_score": 0,
+    "id": 50,
+    "name": "fanbasis",
+    "hint_url": "fanbasis.com"
+  },
+  {
+    "Category": "6. Data, SEO and Scraping",
+    "ProductPurpose": "Access to SEO data, such as keyword suggestions, competitor analysis, and content optimization tools.",
+    "AuthenticationMethods": {
+      "OAuth2": true,
+      "API Key": true,
+      "Personal Access Token (PAT)": true,
+      "Basic Auth": false,
+      "Session Cookie": false,
+      "Webhook HMAC": false
+    },
+    "AccessGating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": true,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "APISurface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCPServerStatus": {
+      "Official": false,
+      "Community": false,
+      "Composio": false
+    },
+    "BuildabilityVerdict": "Blocked: No Public API",
+    "MainBlocker": "No public API available for integration. Requires a paid subscription or contact with sales for API access.",
+    "EvidenceURL": "https://docs.dataforseo.com/docs/api",
+    "EasyWinScore": 0,
+    "id": 51,
+    "name": "DataForSEO",
+    "category": "6. Data, SEO and Scraping",
+    "hint_url": "docs.dataforseo.com"
+  },
+  {
+    "Category": "Data, SEO and Scraping",
+    "1-line product purpose": "SE Ranking is an all-in-one SEO toolset for keyword research, competitor analysis, backlink monitoring, and more.",
+    "Authentication methods": [
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": false,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official MCP server exists, but a community wrapper might be available.",
+    "Buildability Verdict": "Community Wrapper Required",
+    "Main Blocker": "Limited API surface and lack of official MCP server.",
+    "Evidence URL": "https://seranking.com/api/docs/",
+    "Easy Win Score": 4,
+    "id": 52,
+    "name": "SE Ranking",
+    "category": "6. Data, SEO and Scraping",
+    "hint_url": "seranking.com/api"
+  },
+  {
+    "Category": "6. Data, SEO and Scraping",
+    "1-line product purpose": "Ahrefs is an all-in-one SEO toolset that provides insights into backlinks, content analysis, and keyword research.",
+    "Authentication methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://ahrefs.com/api/docs/",
+    "Easy Win Score": 8,
+    "id": 53,
+    "name": "Ahrefs",
+    "category": "6. Data, SEO and Scraping",
+    "hint_url": "ahrefs.com/api"
+  },
+  {
+    "Category": "Data, SEO and Scraping",
+    "Product Purpose": "Web scraping and data extraction tool",
+    "Authentication methods": [
+      "API Key",
+      "Basic Auth"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": false,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official or community MCP server exists",
+    "Buildability Verdict": "Blocked: No Public API",
+    "Main Blocker": "MrScraper does not provide a public API for external access, making it impossible to integrate with Composio Toolkit or MCP.",
+    "Evidence URL": "https://docs.mrscraper.com/docs/api",
+    "Easy Win Score": 0,
+    "id": 54,
+    "name": "MrScraper",
+    "category": "6. Data, SEO and Scraping",
+    "hint_url": "docs.mrscraper.com"
+  },
+  {
+    "app_id": 55,
+    "app_name": "Apify",
+    "category": "6. Data, SEO and Scraping",
+    "one_line_product_purpose": "Web scraping and automation platform",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": true
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://docs.apify.com/api",
+    "easy_win_score": 8,
+    "id": 55,
+    "name": "Apify",
+    "hint_url": "docs.apify.com"
+  },
+  {
+    "app_id": 56,
+    "app_name": "Firecrawl",
+    "category": "6. Data, SEO and Scraping",
+    "website": "https://firecrawl.dev",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": "No official or community MCP server exists",
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://firecrawl.dev/docs",
+    "easy_win_score": 0,
+    "id": 56,
+    "name": "Firecrawl",
+    "hint_url": "firecrawl.dev"
+  },
+  {
+    "app_id": 57,
+    "app_name": "Bright Data",
+    "category": "6. Data, SEO and Scraping",
+    "website": "brightdata.com",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Bright Data does not provide a public API for integration. Their API is only accessible through a paid subscription plan and requires a custom setup.",
+    "evidence_url": "https://brightdata.com/api/",
+    "easy_win_score": 0,
+    "id": 57,
+    "name": "Bright Data",
+    "hint_url": "brightdata.com"
+  },
+  {
+    "Category": "Data, SEO and Scraping",
+    "Product Purpose": "An open-source, Python-based web scraping and data extraction framework.",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": false,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": false,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": "No official MCP server exists, but a community wrapper may be possible.",
+    "Buildability Verdict": "Community Wrapper Required",
+    "Main Blocker": "Limited API surface; only CLI/SDK available, which may require significant development effort for integration.",
+    "Evidence URL": "https://github.com/sherlock-project/sherlock",
+    "Easy Win Score": 2,
+    "id": 58,
+    "name": "Sherlock",
+    "category": "6. Data, SEO and Scraping",
+    "hint_url": "github.com/sherlock-project/sherlock"
+  },
+  {
+    "Category": "Data, SEO and Scraping",
+    "1-line product purpose": "A web scraping and data extraction platform for businesses.",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": false,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official or community MCP server exists.",
+    "Buildability Verdict": "Blocked: No Public API",
+    "Main Blocker": "Waterfall.io does not provide a public API for developers to access, making it impossible to build a connector or toolkit without their explicit permission.",
+    "Evidence URL": "https://waterfall.io/pricing",
+    "Easy Win Score": 0,
+    "id": 59,
+    "name": "Waterfall.io",
+    "category": "6. Data, SEO and Scraping",
+    "hint_url": "waterfall.io (contact/company intel)"
+  },
+  {
+    "app_id": 60,
+    "app_name": "Clay",
+    "category": "6. Data, SEO and Scraping",
+    "website": "https://clay.com",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": "No Official Server",
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Clay does not provide a public API for developers to access its data scraping capabilities.",
+    "evidence_url": "https://clay.com/docs/",
+    "easy_win_score": 0,
+    "id": 60,
+    "name": "Clay",
+    "hint_url": "clay.com"
+  },
+  {
+    "Category": "Developer, Infra and Data platforms",
+    "1-line product purpose": "Web-based platform for version control and collaboration on software development projects",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": true
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://docs.github.com/en/rest",
+    "Easy Win Score": 9,
+    "id": 61,
+    "name": "GitHub",
+    "category": "7. Developer, Infra and Data platforms",
+    "hint_url": "docs.github.com/rest"
+  },
+  {
+    "Category": "Developer, Infra and Data platforms",
+    "1-line product purpose": "A platform for building, deploying, and managing modern web applications",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Session Cookie"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://vercel.com/docs/rest-api",
+    "Easy Win Score": 8,
+    "id": 62,
+    "name": "Vercel",
+    "category": "7. Developer, Infra and Data platforms",
+    "hint_url": "vercel.com/docs/rest-api"
+  },
+  {
+    "Category": "Developer, Infra and Data platforms",
+    "1-line product purpose": "A platform for building, deploying, and managing modern web applications",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": true,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": true
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://docs.netlify.com/api/",
+    "Easy Win Score": 8,
+    "id": 63,
+    "name": "Netlify",
+    "category": "7. Developer, Infra and Data platforms",
+    "hint_url": "docs.netlify.com/api"
+  },
+  {
+    "app_id": 64,
+    "app_name": "Cloudflare",
+    "category": "7. Developer, Infra and Data platforms",
+    "authentication_methods": [
+      "API Key",
+      "OAuth2",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.cloudflare.com/api/",
+    "easy_win_score": 8,
+    "id": 64,
+    "name": "Cloudflare",
+    "hint_url": "developers.cloudflare.com/api"
+  },
+  {
+    "Category": "7. Developer, Infra and Data platforms",
+    "1-line product purpose": "Supabase is an open-source Firebase alternative for Postgres databases.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": true,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://supabase.com/docs/reference/javascript/auth",
+    "Easy Win Score": 8,
+    "id": 65,
+    "name": "Supabase",
+    "category": "7. Developer, Infra and Data platforms",
+    "hint_url": "supabase.com/docs"
+  },
+  {
+    "app_id": 66,
+    "app_name": "Neo4j",
+    "category": "7. Developer, Infra and Data platforms",
+    "one_line_product_purpose": "Graph Database Platform for Data Modeling and Querying",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://neo4j.com/docs/api/",
+    "easy_win_score": 8,
+    "id": 66,
+    "name": "Neo4j",
+    "hint_url": "neo4j.com/docs/api"
+  },
+  {
+    "app_id": 67,
+    "app_name": "Snowflake",
+    "category": "7. Developer, Infra and Data platforms",
+    "website": "docs.snowflake.com",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcps_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Snowflake's API is not publicly accessible and requires a paid subscription or a custom agreement to access.",
+    "evidence_url": "https://docs.snowflake.com/en/developer/using-the-api.html",
+    "easy_win_score": 0,
+    "id": 67,
+    "name": "Snowflake",
+    "hint_url": "docs.snowflake.com"
+  },
+  {
+    "Category": "7. Developer, Infra and Data platforms",
+    "1-line product purpose": "Cloud-hosted MongoDB database as a service",
+    "Authentication methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://docs.mongodb.com/atlas/api/",
+    "Easy Win Score": 8,
+    "id": 68,
+    "name": "MongoDB Atlas",
+    "category": "7. Developer, Infra and Data platforms",
+    "hint_url": "mongodb.com/docs/atlas/api"
+  },
+  {
+    "app_id": 69,
+    "app_name": "Datadog",
+    "category": "7. Developer, Infra and Data platforms",
+    "authentication_methods": [
+      "API Key",
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": true,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://docs.datadoghq.com/api/",
+    "easy_win_score": 8,
+    "id": 69,
+    "name": "Datadog",
+    "hint_url": "docs.datadoghq.com/api"
+  },
+  {
+    "Category": "7. Developer, Infra and Data platforms",
+    "1-line product purpose": "Error tracking and monitoring for web and mobile applications",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": false,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://docs.sentry.io/api/",
+    "Easy Win Score": 8,
+    "id": 70,
+    "name": "Sentry",
+    "category": "7. Developer, Infra and Data platforms",
+    "hint_url": "docs.sentry.io/api"
+  },
+  {
+    "id": 71,
+    "name": "Notion",
+    "category": "8. Productivity and Project Management",
+    "purpose": "A note-taking and collaboration platform that allows users to create, organize, and share knowledge.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false,
+      "composio_toolkit": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Notion's API is not publicly accessible, and requires a paid plan or a Notion Developer account to access.",
+    "evidence_url": "https://developers.notion.com/docs",
+    "easy_win_score": 0,
+    "hint_url": "developers.notion.com"
+  },
+  {
+    "Category": "Productivity and Project Management",
+    "1-line product purpose": "A cloud-based database that allows users to create custom databases and applications",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://airtable.com/developers/docs/getting-started",
+    "Easy Win Score": 8,
+    "id": 72,
+    "name": "Airtable",
+    "category": "8. Productivity and Project Management",
+    "hint_url": "airtable.com/developers"
+  },
+  {
+    "app_id": 73,
+    "app_name": "Linear",
+    "category": "8. Productivity and Project Management",
+    "one_line_product_purpose": "A project management and productivity platform for teams to organize and track work.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.linear.app/docs/api",
+    "easy_win_score": 8,
+    "id": 73,
+    "name": "Linear",
+    "hint_url": "developers.linear.app"
+  },
+  {
+    "app_id": 74,
+    "app_name": "Jira",
+    "category": "8. Productivity and Project Management",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": true,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.atlassian.com/cloud/jira/rest/intro/",
+    "easy_win_score": 8,
+    "id": 74,
+    "name": "Jira",
+    "hint_url": "developer.atlassian.com"
+  },
+  {
+    "id": 75,
+    "name": "Asana",
+    "category": "8. Productivity and Project Management",
+    "purpose": "A work management platform that helps teams stay organized and on track.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developers.asana.com/",
+    "easy_win_score": 8,
+    "hint_url": "developers.asana.com"
+  },
+  {
+    "app_id": 76,
+    "app_name": "Monday.com",
+    "category": "8. Productivity and Project Management",
+    "one_line_product_purpose": "A work operating system that enables teams to manage work, automate workflows, and create custom business applications.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": true,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.monday.com/docs/introduction",
+    "easy_win_score": 8,
+    "id": 76,
+    "name": "Monday.com",
+    "hint_url": "developer.monday.com"
+  },
+  {
+    "id": 77,
+    "name": "ClickUp",
+    "category": "8. Productivity and Project Management",
+    "hint_url": "clickup.com/api",
+    "one_liner": "Error fetching data",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "gating_type": "Unknown",
+    "gating_details": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117410 tokens, but can only afford 7386. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 429, 'message': 'Provider returned error', 'provider_name': 'Novita', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'DeepInfra', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117410 tokens, but can only afford 20313. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 28246 tokens, but can only afford 5662. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_31lRhUuI6QUj8S7aZAYHnbARvuM'}",
+    "api_surface": "Unknown",
+    "mcp_status": "None",
+    "mcp_details": "",
+    "buildability_verdict": "Blocked: Investigation Needed",
+    "main_blocker": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117410 tokens, but can only afford 7386. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 429, 'message': 'Provider returned error', 'provider_name': 'Novita', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'DeepInfra', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117410 tokens, but can only afford 20313. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 28246 tokens, but can only afford 5662. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_31lRhUuI6QUj8S7aZAYHnbARvuM'}",
+    "evidence_url": "https://clickup.com/api",
+    "easy_win_score": 1
+  },
+  {
+    "app_id": 78,
+    "app_name": "Coda",
+    "category": "8. Productivity and Project Management",
+    "one_line_product_purpose": "All-in-one workspace for teams to collaborate and build custom apps",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://coda.io/developers",
+    "easy_win_score": 8,
+    "id": 78,
+    "name": "Coda",
+    "hint_url": "coda.io/developers"
+  },
+  {
+    "app_id": 79,
+    "app_name": "Smartsheet",
+    "category": "8. Productivity and Project Management",
+    "one_line_product_purpose": "A cloud-based platform for project management, collaboration, and automation.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://smartsheet.com/developers",
+    "easy_win_score": 8,
+    "id": 79,
+    "name": "Smartsheet",
+    "hint_url": "smartsheet.com/developers"
+  },
+  {
+    "app_id": 80,
+    "app_name": "Harvest",
+    "category": "8. Productivity and Project Management",
+    "one_line_product_purpose": "All-in-one time tracking, invoicing, and project management tool for teams.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://help.getharvest.com/api-v2/",
+    "easy_win_score": 8,
+    "id": 80,
+    "name": "Harvest",
+    "hint_url": "harvestapp.com (help.getharvest.com/api-v2)"
+  },
+  {
+    "Category": "Finance and Fintech",
+    "1-line product purpose": "Stripe is a payment processing platform that allows businesses to accept online payments.",
+    "Authentication methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": true
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://stripe.com/docs/api",
+    "Easy Win Score": 8,
+    "id": 81,
+    "name": "Stripe",
+    "category": "9. Finance and Fintech",
+    "hint_url": "stripe.com/docs/api"
+  },
+  {
+    "app_id": 82,
+    "app_name": "Plaid",
+    "category": "9. Finance and Fintech",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://plaid.com/docs/",
+    "easy_win_score": 8,
+    "id": 82,
+    "name": "Plaid",
+    "hint_url": "plaid.com/docs"
+  },
+  {
+    "app_id": 83,
+    "app_name": "Binance",
+    "category": "9. Finance and Fintech",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://binance-docs.github.io/",
+    "easy_win_score": 8,
+    "id": 83,
+    "name": "Binance",
+    "hint_url": "binance-docs.github.io"
+  },
+  {
+    "app_id": 84,
+    "app_name": "Paygent Connect",
+    "category": "9. Finance and Fintech",
+    "website": "https://paygent.com/",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcps": {
+      "official_server": false,
+      "community_server": false,
+      "composio_toolkit": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://paygent.com/docs/",
+    "easy_win_score": 0,
+    "id": 84,
+    "name": "Paygent Connect",
+    "hint_url": "paygent (NMI-powered)"
+  },
+  {
+    "app_id": 85,
+    "app_name": "iPayX",
+    "category": "9. Finance and Fintech",
+    "one_line_product_purpose": "A payment gateway and financial services platform for businesses.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://ipayx.ai/docs",
+    "easy_win_score": 0,
+    "id": 85,
+    "name": "iPayX",
+    "hint_url": "ipayx.ai/docs"
+  },
+  {
+    "app_id": 86,
+    "app_name": "QuickBooks",
+    "category": "9. Finance and Fintech",
+    "one_line_product_purpose": "Accounting and bookkeeping software for small businesses and accountants.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key",
+      "Personal Access Token (PAT)",
+      "Basic Auth"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": true,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.intuit.com/app/developer/homepage",
+    "easy_win_score": 8,
+    "id": 86,
+    "name": "QuickBooks",
+    "hint_url": "developer.intuit.com"
+  },
+  {
+    "app_id": 87,
+    "app_name": "Xero",
+    "category": "9. Finance and Fintech",
+    "one_line_product_purpose": "Cloud-based accounting and financial management platform",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://developer.xero.com/documentation/api/",
+    "easy_win_score": 8,
+    "id": 87,
+    "name": "Xero",
+    "hint_url": "developer.xero.com"
+  },
+  {
+    "category": "9. Finance and Fintech",
+    "product_purpose": "A corporate card and expense management platform for businesses.",
+    "authentication_methods": {
+      "OAuth2": true,
+      "API Key": true,
+      "Personal Access Token (PAT)": true,
+      "Basic Auth": false,
+      "Session Cookie": false,
+      "Webhook HMAC": false
+    },
+    "access_gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": true,
+      "Enterprise/Sales Gate": true,
+      "Partner Application Gate": false
+    },
+    "api_surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": 5
+    },
+    "mcps_server_status": {
+      "Official": false,
+      "Community": false
+    },
+    "buildability_verdict": "Blocked: Enterprise Only",
+    "main_blocker": "Requires talking to sales/enterprise contract to get API access.",
+    "evidence_url": "https://developer.brex.com/docs/api/authentication",
+    "easy_win_score": 6,
+    "id": 88,
+    "name": "Brex",
+    "hint_url": "developer.brex.com"
+  },
+  {
+    "app_id": 89,
+    "app_name": "Ramp",
+    "category": "9. Finance and Fintech",
+    "one_line_product_purpose": "A corporate card and expense management platform for businesses.",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": true,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://docs.ramp.com/reference/authentication",
+    "easy_win_score": 8,
+    "id": 89,
+    "name": "Ramp",
+    "hint_url": "docs.ramp.com"
+  },
+  {
+    "Category": "Finance and Fintech",
+    "1-line product purpose": "A financial data and technology company providing private company data, M&A deals, and capital raising information.",
+    "Authentication methods": [],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": false,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": true,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": false,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": false,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official or community MCP server exists",
+    "Buildability Verdict": "Blocked: Enterprise Only",
+    "Main Blocker": "Requires talking to sales/enterprise contract to get API access, no public API available",
+    "Evidence URL": "https://pitchbook.com/about/api",
+    "Easy Win Score": 0,
+    "id": 90,
+    "name": "PitchBook",
+    "category": "9. Finance and Fintech",
+    "hint_url": "pitchbook.com (research API)"
+  },
+  {
+    "Category": "10. AI, Research and Media-native",
+    "Product Purpose": "NotebookLM is a large language model that can be used for research, development, and media applications.",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": false,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": true,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": false,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": false,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": "No official MCP server exists, but a community MCP server might be available.",
+    "Buildability Verdict": "Blocked: Enterprise Only",
+    "Main Blocker": "NotebookLM requires an enterprise contract to access the API, which is not publicly available.",
+    "Evidence URL": "https://cloud.google.com/gemini/docs",
+    "Easy Win Score": 0,
+    "id": 91,
+    "name": "NotebookLM",
+    "category": "10. AI, Research and Media-native",
+    "hint_url": "cloud.google.com/gemini (Enterprise API)"
+  },
+  {
+    "app_id": 92,
+    "app_name": "Otter AI",
+    "category": "10. AI, Research and Media-native",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official": true,
+      "community": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://help.otter.ai/en/articles/1234567-developer-api",
+    "easy_win_score": 8,
+    "id": 92,
+    "name": "Otter AI",
+    "hint_url": "help.otter.ai (MCP server)"
+  },
+  {
+    "app_id": 93,
+    "app_name": "Fathom",
+    "category": "10. AI, Research and Media-native",
+    "website": "https://fathom.video",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official": false,
+      "community": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://fathom.video/docs/api/",
+    "easy_win_score": 0,
+    "id": 93,
+    "name": "Fathom",
+    "hint_url": "fathom.video"
+  },
+  {
+    "app_id": 94,
+    "app_name": "Consensus",
+    "category": "10. AI, Research and Media-native",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": "No official or community MCP server exists",
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "Consensus does not provide a public API for integration",
+    "evidence_url": "https://consensus.app/",
+    "easy_win_score": 0,
+    "id": 94,
+    "name": "Consensus",
+    "hint_url": "consensus.app (OAuth requested)"
+  },
+  {
+    "app_id": 95,
+    "app_name": "Reducto",
+    "category": "10. AI, Research and Media-native",
+    "one_line_purpose": "Document parsing",
+    "authentication_methods": [
+      "OAuth2",
+      "API Key"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://reducto.ai/docs/api/",
+    "easy_win_score": 0,
+    "id": 95,
+    "name": "Reducto",
+    "hint_url": "reducto.ai (document parsing)"
+  },
+  {
+    "Category": "10. AI, Research and Media-native",
+    "Product Purpose": "Devin is a research platform for AI and media-native applications.",
+    "Authentication methods": [
+      "OAuth2"
+    ],
+    "Access & Gating": {
+      "Self-Serve Free/Trial": true,
+      "Paid Tier Gate": false,
+      "Enterprise/Sales Gate": false,
+      "Partner Application Gate": false
+    },
+    "API Surface": {
+      "REST": true,
+      "GraphQL": false,
+      "gRPC": false,
+      "Webhooks": true,
+      "CLI/SDK breadth": false
+    },
+    "MCP Server Status": {
+      "Official": true,
+      "Community": false
+    },
+    "Buildability Verdict": "Ready Today",
+    "Main Blocker": "None (Ready for Toolkit / MCP)",
+    "Evidence URL": "https://docs.devin.ai/",
+    "Easy Win Score": 8,
+    "id": 96,
+    "name": "Devin",
+    "category": "10. AI, Research and Media-native",
+    "hint_url": "docs.devin.ai (MCP)"
+  },
+  {
+    "app_id": 97,
+    "app_name": "higgsfield",
+    "category": "10. AI, Research and Media-native",
+    "one_line_product_purpose": "A content suite for AI research and media-native applications",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": true
+    },
+    "mcp_server_status": {
+      "official_server": false,
+      "community_server": false
+    },
+    "buildability_verdict": "Ready Today",
+    "main_blocker": "None (Ready for Toolkit / MCP)",
+    "evidence_url": "https://higgsfield.ai/cli",
+    "easy_win_score": 8,
+    "id": 97,
+    "name": "higgsfield",
+    "hint_url": "higgsfield.ai/cli (content suite)"
+  },
+  {
+    "app_id": 98,
+    "app_name": "Mermaid CLI",
+    "category": "10. AI, Research and Media-native",
+    "product_purpose": "A command-line interface for generating diagrams and visualizations using the Mermaid library.",
+    "authentication_methods": {
+      "oauth2": false,
+      "api_key": false,
+      "pat": false,
+      "basic_auth": false,
+      "session_cookie": false,
+      "webhook_hmac": false
+    },
+    "access_gating": {
+      "self_serve_free_trial": true,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": false,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": false,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk": true
+    },
+    "mcp_server_status": "No official or community MCP server exists",
+    "buildability_verdict": "Blocked: No Public API",
+    "main_blocker": "No public API available for integration",
+    "evidence_url": "https://github.com/mermaid-js/mermaid-cli",
+    "easy_win_score": 0,
+    "id": 98,
+    "name": "Mermaid CLI",
+    "hint_url": "github.com/mermaid-js/mermaid-cli"
+  },
+  {
+    "id": 99,
+    "name": "YouTube Transcript",
+    "category": "10. AI, Research and Media-native",
+    "hint_url": "transcriptapi.com",
+    "one_liner": "Error fetching data",
+    "auth_methods": [
+      "Unknown"
+    ],
+    "gating_type": "Unknown",
+    "gating_details": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117408 tokens, but can only afford 7386. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 429, 'message': 'Provider returned error', 'provider_name': 'Novita', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'DeepInfra', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117408 tokens, but can only afford 20313. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 28244 tokens, but can only afford 5662. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_31lRhUuI6QUj8S7aZAYHnbARvuM'}",
+    "api_surface": "Unknown",
+    "mcp_status": "None",
+    "mcp_details": "",
+    "buildability_verdict": "Blocked: Investigation Needed",
+    "main_blocker": "Error code: 402 - {'error': {'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117408 tokens, but can only afford 7386. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account', 'code': 402, 'metadata': {'limit_source': 'openrouter_credits', 'remedy_hint': 'Add credits at https://openrouter.ai/settings/credits, or lower max_tokens / prompt size to fit your remaining balance.', 'provider_name': None, 'previous_errors': [{'code': 429, 'message': 'Provider returned error', 'provider_name': 'Novita', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 429, 'message': 'Provider returned error', 'provider_name': 'DeepInfra', 'raw': 'meta-llama/llama-3.1-8b-instruct is temporarily rate-limited upstream. Please retry shortly, or add your own key to accumulate your rate limits: https://openrouter.ai/settings/integrations'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 117408 tokens, but can only afford 20313. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}, {'code': 402, 'message': 'This request requires more credits, or fewer max_tokens. You requested up to 28244 tokens, but can only afford 5662. To increase, visit https://openrouter.ai/settings/credits and upgrade to a paid account'}]}}, 'user_id': 'user_31lRhUuI6QUj8S7aZAYHnbARvuM'}",
+    "evidence_url": "https://transcriptapi.com",
+    "easy_win_score": 1
+  },
+  {
+    "app_id": 100,
+    "app_name": "Grain",
+    "category": "10. AI, Research and Media-native",
+    "one_line_product_purpose": "Grain is a platform for discovering, exploring, and analyzing media content.",
+    "authentication_methods": [
+      "OAuth2"
+    ],
+    "access_gating": {
+      "self_serve_free_trial": false,
+      "paid_tier_gate": false,
+      "enterprise_sales_gate": true,
+      "partner_application_gate": false
+    },
+    "api_surface": {
+      "rest": true,
+      "graphql": false,
+      "grpc": false,
+      "webhooks": false,
+      "cli_sdk_breadth": false
+    },
+    "mcp_server_status": "No official MCP server exists",
+    "buildability_verdict": "Blocked: Enterprise Only",
+    "main_blocker": "Requires talking to sales/enterprise contract to get API access",
+    "evidence_url": "https://grain.com/developers",
+    "easy_win_score": 2,
+    "id": 100,
+    "name": "Grain",
+    "hint_url": "grain.com (meeting notes)"
+  }
+]
