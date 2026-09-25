@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Composio AI Product Ops — 100 Apps Toolkit & MCP Research Case Study</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <style>
     /* ==========================================================================
@@ -25,15 +22,15 @@
       --border-subtle: #e9e9e7;
       --border-medium: #dfdfde;
       --border-focus: #2383e2;
-
+      
       --text-primary: #37352f;
       --text-secondary: #787774;
       --text-muted: #9b9a97;
-
+      
       --accent-blue: #0b6e99;
       --accent-cyan: #008da5;
       --accent-indigo: #4f46e5;
-
+      
       /* Notion Pastel Tag Colors */
       --tag-gray-bg: #e3e2e0;
       --tag-gray-text: #32302c;
@@ -91,29 +88,34 @@
     }
 
     /* ==========================================================================
-       TOP NOTION BREADCRUMB & NAV BAR
+       TOP NOTION BREADCRUMB & NAV BAR (RESPONSIVE)
        ========================================================================== */
     .top-nav {
-      height: 48px;
+      height: 50px;
       border-bottom: 1px solid var(--border-subtle);
       display: flex;
       align-items: center;
       justify-content: space-between;
       position: sticky;
       top: 0;
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.96);
       z-index: 60;
-      backdrop-filter: blur(8px);
+      backdrop-filter: blur(10px);
       padding: 0 32px;
+      gap: 12px;
     }
 
     .breadcrumb {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
       font-size: 13px;
       color: var(--text-secondary);
       font-weight: 500;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .breadcrumb span.slash {
@@ -124,34 +126,25 @@
     .breadcrumb .current {
       color: var(--text-primary);
       font-weight: 600;
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .nav-actions {
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-shrink: 0;
     }
 
     /* Notion Header */
     .notion-header {
-      padding: 36px 0 20px;
+      padding: 32px 0 20px;
       margin-bottom: 20px;
-    }
-
-    .page-icon {
-      font-size: 50px;
-      line-height: 1;
-      margin-bottom: 14px;
-      display: inline-block;
-      cursor: pointer;
-      transition: transform 0.2s;
-    }
-
-    .page-icon:hover {
-      transform: scale(1.08);
     }
 
     .page-title {
@@ -176,7 +169,7 @@
     .page-meta-row {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
       margin-top: 14px;
       flex-wrap: wrap;
       font-size: 13px;
@@ -189,7 +182,7 @@
       gap: 6px;
       background: var(--bg-surface);
       border: 1px solid var(--border-subtle);
-      padding: 3px 10px;
+      padding: 4px 10px;
       border-radius: 6px;
       font-size: 12px;
       color: var(--text-secondary);
@@ -202,13 +195,14 @@
       gap: 6px;
       padding: 6px 12px;
       border-radius: 6px;
-      font-size: 13px;
+      font-size: 12.5px;
       font-weight: 500;
       cursor: pointer;
       transition: all 0.15s;
       border: 1px solid var(--border-subtle);
       background: var(--bg-card);
       color: var(--text-primary);
+      white-space: nowrap;
     }
 
     .btn:hover {
@@ -268,8 +262,8 @@
        ========================================================================== */
     .stats-row {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-      gap: 14px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
       margin-bottom: 32px;
     }
 
@@ -341,7 +335,7 @@
 
     .insights-3col {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 16px;
       margin-bottom: 24px;
     }
@@ -383,7 +377,7 @@
     /* Charts Grid */
     .charts-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 16px;
       margin-top: 18px;
     }
@@ -411,7 +405,7 @@
        ========================================================================== */
     .flow-steps {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 14px;
       margin-bottom: 20px;
     }
@@ -469,7 +463,7 @@
       color: var(--text-secondary);
       font-size: 13px;
       font-weight: 500;
-      padding: 4px 10px;
+      padding: 5px 10px;
       border-radius: 5px;
       cursor: pointer;
       display: inline-flex;
@@ -505,7 +499,7 @@
       color: var(--text-primary);
       font-family: inherit;
       font-size: 13px;
-      width: 240px;
+      width: 230px;
       transition: all 0.15s;
     }
 
@@ -541,6 +535,12 @@
       gap: 6px;
       overflow-x: auto;
       white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+
+    .cat-bar::-webkit-scrollbar {
+      display: none;
     }
 
     .cat-btn {
@@ -553,6 +553,7 @@
       font-weight: 500;
       cursor: pointer;
       transition: all 0.15s;
+      flex-shrink: 0;
     }
 
     .cat-btn:hover {
@@ -572,6 +573,7 @@
       border-radius: 0 0 8px 8px;
       overflow-x: auto;
       background: var(--bg-card);
+      -webkit-overflow-scrolling: touch;
     }
 
     .notion-table {
@@ -579,6 +581,7 @@
       border-collapse: collapse;
       font-size: 13px;
       text-align: left;
+      min-width: 900px;
     }
 
     .notion-table th {
@@ -706,13 +709,13 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(15, 15, 15, 0.4);
+      background: rgba(15, 15, 15, 0.45);
       backdrop-filter: blur(4px);
       z-index: 100;
       display: none;
       align-items: center;
       justify-content: center;
-      padding: 20px;
+      padding: 16px;
     }
 
     .modal-sheet {
@@ -721,24 +724,24 @@
       border-radius: 12px;
       max-width: 680px;
       width: 100%;
-      max-height: 88vh;
+      max-height: 90vh;
       overflow-y: auto;
-      padding: 28px;
+      padding: 24px;
       box-shadow: var(--shadow-modal);
       position: relative;
     }
 
     .modal-close {
       position: absolute;
-      top: 18px;
-      right: 18px;
+      top: 16px;
+      right: 16px;
       background: none;
       border: none;
       color: var(--text-secondary);
       font-size: 20px;
       cursor: pointer;
       border-radius: 4px;
-      padding: 2px 6px;
+      padding: 2px 8px;
     }
 
     .modal-close:hover {
@@ -779,6 +782,9 @@
       gap: 12px;
     }
 
+    /* ==========================================================================
+       RESPONSIVE MEDIA QUERIES (MOBILE OPTIMIZATIONS)
+       ========================================================================== */
     @media (max-width: 768px) {
       .container {
         padding: 0 16px;
@@ -788,8 +794,67 @@
         padding: 0 16px;
       }
 
+      .nav-prefix {
+        display: none !important;
+      }
+
+      .breadcrumb {
+        font-size: 13px;
+      }
+
+      .page-title {
+        font-size: 24px;
+      }
+
+      .page-subtitle {
+        font-size: 13.5px;
+      }
+
+      .stats-row {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+
+      .db-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .view-switcher {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .db-controls {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
       .search-input {
         width: 100%;
+      }
+
+      .filter-select {
+        width: 100%;
+      }
+
+      .insights-3col {
+        grid-template-columns: 1fr;
+      }
+
+      .charts-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flow-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .modal-sheet {
+        padding: 20px 16px;
+        border-radius: 8px;
       }
 
       .modal-row {
@@ -800,20 +865,22 @@
       .modal-label {
         width: 100%;
       }
+
+      footer {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Top Notion Navigation Bar -->
+  <!-- Top Notion Navigation Bar (Mobile-Responsive) -->
   <nav class="top-nav">
     <div class="breadcrumb">
-      <span>Workspace</span>
-      <span class="slash">/</span>
-      <span>Composio AI Product Ops</span>
-      <span class="slash">/</span>
-      <span class="current">⚡ 100 Apps Toolkit & MCP Case Study</span>
+      <span class="nav-prefix">Workspace <span class="slash">/</span> Composio AI Product Ops <span class="slash">/</span></span>
+      <span class="current">⚡ 100 Apps Study</span>
     </div>
 
     <div class="nav-actions">
@@ -826,7 +893,6 @@
 
     <!-- Notion Header -->
     <header class="notion-header">
-      <!-- <div class="page-icon">⚡</div> -->
       <h1 class="page-title">
         Composio AI Product Ops — 100 Apps Research & MCP Readiness
       </h1>
@@ -860,13 +926,13 @@
     <!-- KPI Stats Grid -->
     <div class="stats-row">
       <div class="stat-card">
-        <div class="stat-header"><span>📊</span> Total Apps Evaluated</div>
+        <div class="stat-header"><span>📊</span> Total Evaluated</div>
         <div class="stat-val">100 / 100</div>
         <div class="stat-sub">10 enterprise SaaS domains</div>
       </div>
 
       <div class="stat-card">
-        <div class="stat-header"><span>⚡</span> Ready Today (Buildability)</div>
+        <div class="stat-header"><span>⚡</span> Ready Today</div>
         <div class="stat-val" style="color: var(--tag-green-text);">89%</div>
         <div class="stat-sub">89 Ready • 11 Gated/Blocked</div>
       </div>
@@ -878,15 +944,14 @@
       </div>
 
       <div class="stat-card">
-        <div class="stat-header"><span>🚀</span> Self-Serve Onboarding</div>
+        <div class="stat-header"><span>🚀</span> Self-Serve</div>
         <div class="stat-val" style="color: var(--tag-purple-text);">77%</div>
         <div class="stat-sub">Instant sandbox / dev tokens</div>
       </div>
 
-      <div class="stat-card">
+      <div class="stat-card" style="grid-column: span 2 / auto;">
         <div class="stat-header"><span>🎯</span> Verification Gain</div>
-        <div class="stat-val" style="color: var(--tag-green-text);">+30.0% <span class="pill pill-green"
-            style="font-size:11px;">95% Acc</span></div>
+        <div class="stat-val" style="color: var(--tag-green-text);">+30.0% <span class="pill pill-green" style="font-size:11px;">95% Acc</span></div>
         <div class="stat-sub">Pass 1: 65% → Pass 2: 95%</div>
       </div>
     </div>
@@ -900,37 +965,28 @@
       <div class="insights-3col">
         <div class="insight-card">
           <h3><span class="pill pill-blue">🔑 Auth Dynamics</span></h3>
-          <p><strong>OAuth2 dominates user-delegated SaaS (65%)</strong>, essential for CRM, Helpdesk, and Project
-            Management.</p>
+          <p><strong>OAuth2 dominates user-delegated SaaS (65%)</strong>, essential for CRM, Helpdesk, and Project Management.</p>
           <ul>
-            <li><strong>API Key & Bearer Tokens (40-46%)</strong>: Dominant in Developer Infra and Data Scraping for
-              machine-to-machine speed.</li>
-            <li><strong>Hybrid Auth (18%)</strong>: Modern leaders (GitHub, Supabase, Linear) support both OAuth2 and
-              granular Personal Access Tokens.</li>
+            <li><strong>API Key & Bearer Tokens (40-46%)</strong>: Dominant in Developer Infra and Data Scraping for machine-to-machine speed.</li>
+            <li><strong>Hybrid Auth (18%)</strong>: Modern leaders (GitHub, Supabase, Linear) support both OAuth2 and granular Personal Access Tokens.</li>
           </ul>
         </div>
 
         <div class="insight-card">
           <h3><span class="pill pill-orange">⚡ Gating Friction</span></h3>
-          <p><strong>77% of apps provide friction-free self-serve sandboxes</strong> or free tiers for instant
-            credential generation.</p>
+          <p><strong>77% of apps provide friction-free self-serve sandboxes</strong> or free tiers for instant credential generation.</p>
           <ul>
-            <li><strong>The 23% Gated Barrier</strong>: Concentrated in Enterprise CRM (DealCloud), Finance (PitchBook),
-              and Ads (Google/LinkedIn Partner Review).</li>
-            <li><strong>Marketing Trial False Flag</strong>: Marketing "Free Trial" buttons often mask enterprise sales
-              gates for APIs.</li>
+            <li><strong>The 23% Gated Barrier</strong>: Concentrated in Enterprise CRM (DealCloud), Finance (PitchBook), and Ads (Google/LinkedIn Partner Review).</li>
+            <li><strong>Marketing Trial False Flag</strong>: Marketing "Free Trial" buttons often mask enterprise sales gates for APIs.</li>
           </ul>
         </div>
 
         <div class="insight-card">
           <h3><span class="pill pill-purple">🧩 MCP & Quick Wins</span></h3>
-          <p><strong>75% of apps have active MCP servers or native toolkits</strong> (21 Official MCPs, 49 Community, 5
-            Composio native).</p>
+          <p><strong>75% of apps have active MCP servers or native toolkits</strong> (21 Official MCPs, 49 Community, 5 Composio native).</p>
           <ul>
-            <li><strong>83 Immediate Quick Wins</strong>: Scoring 8-10 with open REST/GraphQL specs and instant token
-              generation.</li>
-            <li><strong>10 High-Touch Outreach Apps</strong>: Require partner contracts or commercial vetting (Paygent,
-              DealCloud).</li>
+            <li><strong>83 Immediate Quick Wins</strong>: Scoring 8-10 with open REST/GraphQL specs and instant token generation.</li>
+            <li><strong>10 High-Touch Outreach Apps</strong>: Require partner contracts or commercial vetting (Paygent, DealCloud).</li>
           </ul>
         </div>
       </div>
@@ -962,29 +1018,25 @@
         <div class="flow-card highlight">
           <span class="pill pill-blue">Pass 1: Autonomous Extraction</span>
           <h4>Async OpenRouter Agent</h4>
-          <p>Dispatches concurrent LLM workers to extract auth schemas, gating tiers, API surfaces, and docs URLs across
-            100 apps.</p>
+          <p>Dispatches concurrent LLM workers to extract auth schemas, gating tiers, API surfaces, and docs URLs across 100 apps.</p>
         </div>
 
         <div class="flow-card highlight">
           <span class="pill pill-purple">Pass 2: Verification Critic</span>
           <h4>Automated URL & Critic Loop</h4>
-          <p>Validates HTTP 200 doc liveness and executes a secondary LLM Critic to catch enterprise marketing illusions
-            and sub-product conflation.</p>
+          <p>Validates HTTP 200 doc liveness and executes a secondary LLM Critic to catch enterprise marketing illusions and sub-product conflation.</p>
         </div>
 
         <div class="flow-card">
           <span class="pill pill-yellow">Pass 3: Human Audit</span>
           <h4>Stratified Sample Audit</h4>
-          <p>20-app stratified ground-truth audit verifying exact hits and misses, establishing quantifiable accuracy
-            progression curves.</p>
+          <p>20-app stratified ground-truth audit verifying exact hits and misses, establishing quantifiable accuracy progression curves.</p>
         </div>
 
         <div class="flow-card">
           <span class="pill pill-green">Output: Analytics</span>
           <h4>Synthesis & Exports</h4>
-          <p>Generates macro pattern clusters and exports clean CSV/JSON datasets powering this Notion-style dashboard.
-          </p>
+          <p>Generates macro pattern clusters and exports clean CSV/JSON datasets powering this Notion-style dashboard.</p>
         </div>
       </div>
 
@@ -1002,56 +1054,49 @@
           </thead>
           <tbody>
             <tr>
-              <td><strong>#1 Salesforce</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span>
-              </td>
+              <td><strong>#1 Salesforce</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span></td>
               <td>Overestimated blocker; claimed paid enterprise required.</td>
               <td>Corrected: Flagged free Salesforce Developer Edition instant Connected App.</td>
               <td><span class="pill pill-green">✓ Ready Today</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
-              <td><strong>#10 DealCloud</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span>
-              </td>
+              <td><strong>#10 DealCloud</strong><br><span style="color:var(--text-muted); font-size:11px;">CRM</span></td>
               <td>Hallucinated self-serve signup from marketing portal.</td>
               <td>Corrected: Detected private Intapp enterprise tenant requirement.</td>
               <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
-              <td><strong>#31 Google Ads</strong><br><span
-                  style="color:var(--text-muted); font-size:11px;">Marketing</span></td>
+              <td><strong>#31 Google Ads</strong><br><span style="color:var(--text-muted); font-size:11px;">Marketing</span></td>
               <td>Marked self-serve based on Google Cloud Console.</td>
               <td>Corrected: Flagged mandatory Google Ads API Center Developer Token approval.</td>
               <td><span class="pill pill-red">✕ Blocked: Partner Gate</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
-              <td><strong>#44 SF Commerce Cloud</strong><br><span
-                  style="color:var(--text-muted); font-size:11px;">Ecommerce</span></td>
+              <td><strong>#44 SF Commerce Cloud</strong><br><span style="color:var(--text-muted); font-size:11px;">Ecommerce</span></td>
               <td>Conflated with core Salesforce developer org.</td>
               <td>Corrected: Differentiated B2C Demandware Account Manager gate.</td>
               <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
-              <td><strong>#58 Sherlock</strong><br><span
-                  style="color:var(--text-muted); font-size:11px;">Data/OSINT</span></td>
+              <td><strong>#58 Sherlock</strong><br><span style="color:var(--text-muted); font-size:11px;">Data/OSINT</span></td>
               <td>Looked for REST endpoint and marked blocked.</td>
               <td>Corrected: Identified open-source Python CLI callable via subprocess/container.</td>
               <td><span class="pill pill-green">✓ Ready Today</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
-              <td><strong>#90 PitchBook</strong><br><span
-                  style="color:var(--text-muted); font-size:11px;">Finance</span></td>
+              <td><strong>#90 PitchBook</strong><br><span style="color:var(--text-muted); font-size:11px;">Finance</span></td>
               <td>Marked trial available from marketing form.</td>
               <td>Corrected: Verified strict $25k+/yr institutional enterprise contract gate.</td>
               <td><span class="pill pill-red">✕ Blocked: Enterprise</span></td>
               <td><span class="pill pill-blue">Fixed in Pass 2</span></td>
             </tr>
             <tr>
-              <td><strong>#91 NotebookLM</strong><br><span style="color:var(--text-muted); font-size:11px;">AI</span>
-              </td>
+              <td><strong>#91 NotebookLM</strong><br><span style="color:var(--text-muted); font-size:11px;">AI</span></td>
               <td>Conflated consumer UI with Gemini API.</td>
               <td>Corrected: Noted consumer app is UI-only without standalone public REST API.</td>
               <td><span class="pill pill-red">✕ Blocked: No Public API</span></td>
@@ -1106,7 +1151,7 @@
         </div>
       </div>
 
-      <!-- Category Filter Pills Bar -->
+      <!-- Category Filter Pills Bar (Smooth Touch Scroll) -->
       <div class="cat-bar" id="categoryTabs">
         <button class="cat-btn active" data-cat="all">All Categories (100)</button>
         <button class="cat-btn" data-cat="1. CRM and Sales">1. CRM & Sales (10)</button>
@@ -1160,9 +1205,8 @@
   <div class="modal-overlay" id="detailModal">
     <div class="modal-sheet">
       <button class="modal-close" onclick="closeModal()">&times;</button>
-
-      <div
-        style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
+      
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 16px;">
         <span id="modalIcon" style="font-size: 28px;">📦</span>
         <div>
           <h2 id="modalAppName" style="font-size: 20px; font-weight: 700; color: var(--text-primary);">App Name</h2>
@@ -1187,9 +1231,7 @@
 
       <div class="modal-row">
         <div class="modal-label">API Surface</div>
-        <div class="modal-val" id="modalApiSurface"
-          style="font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--bg-surface); padding: 8px 10px; border-radius: 6px;">
-        </div>
+        <div class="modal-val" id="modalApiSurface" style="font-family: 'JetBrains Mono', monospace; font-size: 12px; background: var(--bg-surface); padding: 8px 10px; border-radius: 6px;"></div>
       </div>
 
       <div class="modal-row">
@@ -1204,12 +1246,10 @@
 
       <div class="modal-row">
         <div class="modal-label">Verification Audit</div>
-        <div class="modal-val" id="modalVerificationNotes" style="font-size: 12.5px; color: var(--text-secondary);">
-        </div>
+        <div class="modal-val" id="modalVerificationNotes" style="font-size: 12.5px; color: var(--text-secondary);"></div>
       </div>
 
-      <div
-        style="display: flex; gap: 10px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
+      <div style="display: flex; gap: 10px; margin-top: 24px; padding-top: 16px; border-top: 1px solid var(--border-subtle);">
         <a id="modalDocsBtn" href="#" target="_blank" class="btn btn-primary">📖 Open Official Developer Docs ↗</a>
         <button class="btn" onclick="closeModal()">Close</button>
       </div>
@@ -1249,7 +1289,7 @@
       const verdict = document.getElementById('verdictFilter').value;
       const gating = document.getElementById('gatingFilter').value;
       const mcp = document.getElementById('mcpFilter').value;
-
+      
       return appsData.filter(app => {
         if (currentCategory !== 'all' && app.category !== currentCategory) return false;
         if (verdict !== 'all' && app.buildability_verdict !== verdict) return false;
@@ -1493,5 +1533,4 @@
     window.onload = loadData;
   </script>
 </body>
-
 </html>
